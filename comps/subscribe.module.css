@@ -1,0 +1,113 @@
+/* section sixth  */
+
+.sectionsixthComponent {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.sectionsixthTextContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.sectionsixthTextContent > h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextContent > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * {
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextsubscribe * h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribefirst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionsixthTextsubscribesecond > input {
+  padding: 10px 30px;
+  /* background-color: white; */
+  border: 1px solid white;
+}
+
+.sectionsixthTextsubscribesecond > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #dc7000;
+  color: white;
+}
+
+.sectionsixthTextsubscribesecond {
+  margin-top: 10px;
+}
+.sectionsixthTextsubscribesecond * {
+  background-color: white;
+  color: black;
+}
+
+.subscribeemailStyle {
+  padding: 10px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: rgb(135, 189, 135) !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .sectionsixthTextsubscribe {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sectionsixthTextsubscribe {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sectionsixthComponent {
+    margin-top: 300px;
+  }
+  .sectionsixthTextsubscribe {
+    width: 400px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sectionsixthTextContent > h1 {
+    font-size: 24px;
+  }
+
+  .sectionsixthTextContent > h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

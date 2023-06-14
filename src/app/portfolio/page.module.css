@@ -1,0 +1,454 @@
+.PortfolioComponent {
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.PortfolioFirstPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FirstpartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstpartText > h1 {
+  font-weight: 500;
+  font-size: 34px;
+}
+
+.FirstpartText > h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.FirstpartTextdirection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstpartTextdirection > div {
+  color: #e47500;
+  font-size: 20px;
+}
+
+.FirstpartTextdirection > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.SecondPartImage > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* section sixth  */
+
+.sectionsixthComponent {
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.sectionsixthTextContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.sectionsixthTextContent > h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextContent > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.PortfolioSecondPart {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 70px;
+}
+
+.PortfolioSecondPartMainImage {
+  width: 100%;
+  height: 100%;
+}
+
+.PortfolioSecondPartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+
+.PortfolioSecondPartText > h3 {
+  line-height: 150%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.PortfolioSecondPartText > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.PortfolioSecondPartText * img {
+  width: 30px;
+  height: 30px;
+}
+
+.PortfolioThirdPart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.PortfolioThirdPartText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px;
+  margin-top: 30px;
+}
+
+.PortfolioThirdPartText > button {
+  padding: 15px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #dc7000;
+  border: none;
+}
+
+.PortfolioThirdPartText > h1 {
+  font-weight: 600;
+}
+
+.PortfolioThirdPartText > h2 {
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.PortfolioThirdPart > img {
+  width: 80%;
+  height: 80%;
+  margin-top: 60px;
+}
+
+.PortfolioFourthPart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 180px;
+}
+
+.PortfolioThirdPartText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px;
+  margin-top: 30px;
+}
+
+.PortfolioThirdPartText > button {
+  padding: 15px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #dc7000;
+  border: none;
+}
+
+.PortfolioThirdPartText > h1 {
+  font-weight: 600;
+}
+
+.PortfolioThirdPartText > h2 {
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.PortfolioFourthPart > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* fifth part */
+
+.PortfolioFifthPart {
+  margin-top: 100px;
+  padding: 100px 50px;
+  background-color: #1c140f;
+  padding-bottom: 150px;
+}
+
+.PortfolioFifthPart * {
+  background-color: #1c140f;
+}
+
+.FifthpartTextdirection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.FifthpartTextdirection > h1 {
+  font-weight: 500;
+  font-size: 34px;
+}
+
+.FifthpartTextdirection > h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.PortfolioFifthCards {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+  flex-direction: column;
+}
+
+.PortfolioFifthCardsAllThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 50px;
+  margin-top: 70px;
+}
+
+.PortfolioFifthCardsEach {
+  display: flex;
+  flex-direction: row;
+}
+
+.PortfolioFifthCardsParts {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.PortfolioFifthcomment > h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.PortfolioFifthCardsTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PortfolioFifthCardsName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.PortfolioFifthCardsName * h2 {
+  font-size: 18px;
+}
+
+.PortfolioFifthCardsName * h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.PortfolioFifthCardsRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.PortfolioFifthCardsRating > img {
+  width: 20px;
+  height: 20px;
+}
+
+.sectionfifthdefaultImageUser {
+  border-radius: 10px;
+}
+
+/* sixth section */
+
+.sectionsixthTextsubscribe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * {
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextsubscribe * h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribefirst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionsixthTextsubscribesecond > input {
+  padding: 10px 30px;
+  /* background-color: white; */
+  border: 1px solid white;
+}
+
+.sectionsixthTextsubscribesecond > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #dc7000;
+  color: white;
+}
+
+.sectionsixthTextsubscribesecond {
+  margin-top: 10px;
+}
+.sectionsixthTextsubscribesecond * {
+  background-color: white;
+  color: black;
+}
+
+.FirstpartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .PortfolioComponent {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .PortfolioComponent {
+    width: 700px;
+  }
+
+  .PortfolioSecondPart {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .PortfolioSecondPartText {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .PortfolioThirdPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .PortfolioThirdPartText > h1 {
+    font-size: 28px;
+  }
+
+  .PortfolioThirdPartText > h2 {
+    font-size: 20px;
+  }
+  .PortfolioThirdPartText > button {
+    width: 50%;
+  }
+
+  .PortfolioFourthPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .PortfolioFifthCardsAllThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .PortfolioComponent {
+    width: 400px;
+  }
+
+  .FirstpartText > h1 {
+    font-size: 30px;
+  }
+
+  .FirstpartText > h3 {
+    font-size: 20px;
+  }
+
+  .SecondPartImage {
+    width: 450px;
+    height: 300px;
+  }
+
+  .PortfolioSecondPart {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .PortfolioSecondPartText {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .PortfolioThirdPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .PortfolioThirdPartText > h1 {
+    font-size: 28px;
+  }
+
+  .PortfolioThirdPartText > h2 {
+    font-size: 20px;
+  }
+  .PortfolioThirdPartText > button {
+    width: 50%;
+  }
+
+  .PortfolioFourthPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .PortfolioFifthCardsAllThree {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

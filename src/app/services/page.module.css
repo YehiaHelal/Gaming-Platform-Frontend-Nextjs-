@@ -1,0 +1,641 @@
+.ServiceComponent {
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.ServiceFirstPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FirstpartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstpartText > h1 {
+  font-weight: 500;
+  font-size: 34px;
+}
+
+.FirstpartText > h3 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.FirstpartTextdirection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstpartTextdirection > div {
+  color: #e47500;
+  font-size: 20px;
+}
+
+.FirstpartTextdirection > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.FirstpartImageComponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.FirstpartImageComponent * {
+  background-color: black;
+}
+
+.FirstpartImageComponent > input {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.FirstpartImageComponent > img {
+  width: 15px;
+  height: 15px;
+}
+
+.alldirectionmain {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.alldirectionmainEach {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 50px;
+  gap: 20px;
+  align-items: center;
+}
+
+.alldirectionmainEach * {
+  background-color: transparent;
+}
+
+.alldirectionmainEach > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.FirstpartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* section sixth  */
+
+.sectionsixthComponent {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.sectionsixthTextContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.sectionsixthTextContent > h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextContent > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * {
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextsubscribe * h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribefirst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionsixthTextsubscribesecond > input {
+  padding: 10px 30px;
+  /* background-color: white; */
+  border: 1px solid white;
+}
+
+.sectionsixthTextsubscribesecond > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #dc7000;
+  color: white;
+}
+
+.sectionsixthTextsubscribesecond {
+  margin-top: 10px;
+}
+.sectionsixthTextsubscribesecond * {
+  background-color: white;
+  color: black;
+}
+
+.Sorting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 50px;
+}
+
+.Sorting > select {
+  padding: 10px 20px;
+}
+
+.FiltersGame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  margin-right: 50px;
+  gap: 40px;
+}
+
+.FiltersGame > button {
+  padding: 10px;
+}
+
+/* Second Part two */
+
+.SecondpartComponent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.SecondpartDetailsPart {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.SecondpartDetailsPart > h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.SecondpartDetailsPart > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.SecondpartLeftImage {
+  width: 600px;
+  height: 400px;
+}
+
+.SecondpartDetailsPartButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.SecondpartDetailsPartButton > button {
+  padding: 10px 20px;
+}
+
+.SecondpartDetailsRightComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.SecondpartDetailsRightPart {
+  display: grid;
+  /* align-items: center; */
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.SecondpartRightEachServiceImage {
+  width: 200px;
+  height: 200px;
+}
+
+.SecondpartDetailsRightPartComponent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.SecondpartDetailsRightPartTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.SecondpartDetailsRightPartTitle > button {
+  padding: 10px;
+}
+
+.SecondpartDetailsRightPartComponent > h2 {
+  font-weight: 500;
+  width: 70%;
+}
+
+.Secondpartpagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-right: 100px;
+}
+
+.Secondpartpagination > button {
+  padding: 10px;
+}
+
+/* Cart Styles */
+
+.CartComponent {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 150px;
+}
+
+.CartItemEachAllDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.CartItemEachAllDetail * h2 {
+  font-size: 20px;
+}
+
+.CartItemEachButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.CartItemEachButtons > button {
+  padding: 10px;
+}
+
+.CartAddressandPayment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 20px;
+}
+
+.CartAddressandPayment * h3 {
+  text-decoration: underline;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.CartAddressandPayment * h2 {
+  text-decoration: underline;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.CartAddressandPayment * h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.CartAddressandPayment * button {
+  padding: 10px;
+  width: 30%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.cartNumber {
+  background-color: rgb(0, 128, 0, 0.5);
+  padding: 5px;
+}
+
+.cartIsEmptyNote {
+  margin-top: 10px;
+}
+
+.deliverydetaildirecttologin {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 5px;
+  align-items: center;
+}
+
+.deliverydetaildirecttologin * {
+  font-size: 14px;
+}
+
+.deliverydetaildirecttologin a {
+  color: white;
+  text-decoration: underline;
+}
+
+.deliverydetaildirecttologinNotLogged {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.deliverydetaildirecttologinNotLogged * {
+  font-size: 20px;
+}
+
+.deliverydetaildirecttologinNotLogged a {
+  color: white;
+  text-decoration: underline;
+}
+
+.visapaymentstyles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.visapaymentstyles > img {
+  width: 30px;
+  height: 30px;
+}
+
+.organicButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  gap: 10px;
+  /* gap: 10px; */
+}
+
+.organicButton > button {
+  padding: 6px;
+  border: 1px solid black;
+  height: 5px;
+  width: 5px;
+}
+
+.SortingSelect > option {
+  font-size: 14px;
+}
+
+.successfulordernotifcation {
+  padding: 15px;
+  background-color: rgb(135, 189, 135) !important;
+  font-size: 20px;
+}
+
+.Errornotification {
+  padding: 15px;
+  background-color: rgb(255, 0, 0, 0.3) !important;
+  font-size: 20px;
+}
+
+.subscribeemailStyle {
+  padding: 10px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: rgb(135, 189, 135) !important;
+}
+
+@media screen and (max-width: 1300px) {
+  .ServiceComponent {
+    width: 1000px;
+  }
+  .SecondpartDetailsRightPartTitle > button {
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .SecondpartDetailsRightPartComponent > h2 {
+    width: 100%;
+  }
+
+  .SecondpartDetailsPart {
+    width: 400px;
+  }
+
+  .SecondpartLeftImage {
+    /* width: 600px;
+    height: 400px; */
+    width: 300px;
+    height: 300px;
+  }
+
+  .FiltersGame {
+    font-size: 14px !important;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .ServiceComponent {
+    width: 700px;
+  }
+
+  .SecondpartRightEachServiceImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .SecondpartDetailsPart {
+    width: 300px;
+  }
+
+  .SecondpartDetailsRightPartComponent {
+    width: 250px;
+  }
+
+  .Sorting {
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+
+  .FiltersGame {
+    font-size: 14px !important;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .CartAddressandPayment {
+    font-size: 16px;
+  }
+
+  .CartAddressandPayment * button {
+    width: 70%;
+  }
+
+  .CartComponent {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ServiceComponent {
+    width: 400px;
+  }
+
+  .SecondpartDetailsRightPartComponent {
+    width: 150px;
+  }
+
+  .ServiceComponent {
+    /* width: 1400px; */
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .Sorting {
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+
+  .FiltersGame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 10px !important;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .SecondpartRightEachServiceImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .SecondpartDetailsPart {
+    width: 200px;
+  }
+
+  .SecondpartDetailsRightPartComponent {
+    width: 250px;
+  }
+
+  .SecondpartLeftImage {
+    /* width: 600px;
+    height: 400px; */
+    width: 150px;
+    height: 150px;
+  }
+
+  .SecondpartDetailsPartButton {
+    font-size: 12px;
+  }
+
+  .SecondpartDetailsPart > h2 {
+    font-size: 18px;
+  }
+
+  .SecondpartDetailsPart > h3 {
+    font-size: 14px;
+  }
+
+  .SecondpartRightEachServiceImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .SecondpartComponent {
+    gap: 10px;
+  }
+
+  .SecondpartDetailsRightPartTitle {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .SecondpartDetailsRightPartTitle > button {
+    padding: 5px;
+    width: 40%;
+    font-size: 12px;
+  }
+
+  .SecondpartDetailsRightPartComponent {
+    gap: 10px;
+  }
+
+  .SecondpartDetailsRightPartComponent > h2 {
+    font-size: 12px;
+  }
+
+  .CartItemEachAllDetail * h2 {
+    font-size: 14px;
+  }
+
+  .CartItemEachButtons > button {
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  .CartAddressandPayment {
+    font-size: 12px;
+  }
+
+  .CartComponent {
+    gap: 10px;
+  }
+
+  .CartAddressandPayment * button {
+    width: 100%;
+  }
+
+  .deliverydetaildirecttologin {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

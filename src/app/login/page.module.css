@@ -1,0 +1,359 @@
+.page {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 100px;
+  border-radius: 4px;
+  /* border: 2px solid black; */
+}
+
+.component {
+  width: 400px;
+  /* border: 2px solid black; */
+  padding: 20px;
+  margin-bottom: 200px;
+}
+
+.loginButtons > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+
+  gap: 10px;
+}
+
+.loginButtons * button {
+  padding: 10px 40px;
+}
+
+.SignupLoginForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.SignupLoginForm > button {
+  padding: 10px 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.FormEmail {
+  display: flex;
+  gap: 10px;
+}
+
+.FormEmail > label {
+  width: 70px;
+  padding: 10px;
+}
+
+.FormEmail > input {
+  width: 70%;
+}
+
+.FormEmailChangePassword {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.FormEmailChangePassword > input {
+  padding: 5px;
+}
+
+.FormEmailInput {
+  width: 150px;
+}
+
+.error {
+  padding: 10px;
+  background-color: rgb(255, 0, 0, 0.5) !important;
+}
+
+.successRequest {
+  padding: 10px;
+  background-color: green !important;
+}
+
+.ProfileComponent {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ProfileComponent > button {
+  padding: 10px;
+  width: 70%;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage > img {
+  border-radius: 10px;
+}
+
+.contactUswindow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  overflow: auto;
+}
+.contactUswindow > button {
+  width: 30%;
+}
+
+.ContactUsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ContactUsForm > textarea {
+  height: 70px;
+  font-size: 14px;
+}
+
+.ContactUsForm > button {
+  margin-bottom: 10px;
+  width: 30%;
+  padding: 5px 10px;
+}
+
+.contactUswindowBackbutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactUswindowBackbutton > button {
+  padding: 10px;
+}
+
+.contactUswindowBackbuttonv2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contactUswindowBackbuttonv2 > button {
+  padding: 5px 10px;
+}
+
+.contactUswindowBackbuttonTitle {
+  text-decoration: underline;
+}
+
+.uploadImagecomponent {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.changeinformationwindowButtons {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.changeinformationwindowButtons > button {
+  width: 70%;
+  padding: 10px;
+}
+
+.changeinformationwindowData {
+  padding: 20px 10px;
+}
+
+.getMoreOrdersButton {
+  padding: 8px 10px;
+  width: 70%;
+}
+
+.ItemStylesComponentOrdersComponent {
+  overflow: auto;
+}
+
+.ItemStylesComponentOrders {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.ItemStylesComponentOrdersPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FormEmailResetButton {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.FormEmailResetButton > button {
+  padding: 5px;
+}
+
+.orderpaneltitle {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.ItemStylesComponentTotalPrice {
+  margin-top: 20px;
+}
+
+.uploadImagecomponentTitle {
+  text-decoration: underline;
+}
+
+.ImageConfirmUploadImage {
+  width: 100px;
+  height: 100px;
+}
+
+.ConfirmUploadImage {
+  width: 70%;
+  padding: 10px;
+}
+
+.imageuploadInput {
+  display: none;
+}
+
+.imageuploadLabelInput {
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  /* background-color: buttonface; */
+}
+
+.imageuploadLabelInput:hover {
+  /* background-color: rgb(196, 183, 167, 0.3); */
+}
+
+.component * {
+  /* background-color: rgb(214, 221, 230, 0.8); */
+  border-radius: 4px;
+  color: white !important;
+}
+
+/* section sixth  */
+
+.sectionsixthComponent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sectionsixthTextContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.sectionsixthTextContent > h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextContent > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribe {
+  display: grid;
+  width: 110%;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * {
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextsubscribe * h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribefirst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionsixthTextsubscribesecond > input {
+  padding: 10px 30px;
+  /* background-color: white; */
+  border: 1px solid white;
+}
+
+.sectionsixthTextsubscribesecond > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #dc7000;
+  color: white;
+}
+
+.sectionsixthTextsubscribesecond {
+  margin-top: 10px;
+}
+.sectionsixthTextsubscribesecond * {
+  background-color: white;
+  color: black;
+}
+
+.BackButtonAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  /* width: 1000px; */
+}
+
+.BackButtonAdmin > button {
+  padding: 10px 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .page {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .page {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .page {
+    width: 400px;
+  }
+}

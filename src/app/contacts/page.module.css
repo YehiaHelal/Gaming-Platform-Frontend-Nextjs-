@@ -1,0 +1,322 @@
+.AboutComponent {
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.AboutComponentFirstPart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.FirstpartText {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 60px 0px;
+  width: 70%;
+}
+
+.FirstpartText > h1 {
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.FirstpartText > h3 {
+  /* font-size: 30px; */
+  font-weight: 500;
+  line-height: 200%;
+}
+
+.FirstpartTextdirection {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.FirstpartTextdirection > div {
+  color: #e47500;
+  font-size: 20px;
+}
+
+.FirstpartTextdirection > svg {
+  width: 15px;
+  height: 15px;
+}
+
+.FirstpartText > button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  width: 35%;
+  padding: 15px;
+  background-color: #fa8305;
+  border: none;
+}
+
+.FirstpartTextButton * {
+  background-color: #fa8305;
+}
+
+.FirstpartText * img {
+  width: 15px;
+  height: 15px;
+}
+
+.SecondPartImage > img {
+  width: 100%;
+  height: 100%;
+}
+
+.AboutComponentSecondPart {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 100px 0px;
+}
+
+.AboutComponentSecondPart * h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.AboutComponentSecondPartButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.AboutComponentSecondPartButtons * {
+  background-color: #1c140f;
+}
+
+.AboutComponentSecondPartEach {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #1c140f;
+}
+
+.AboutComponentSecondPartEach > button {
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.AboutComponentSecondPartEachButton1 {
+  background-color: rgb(176, 0, 220, 0.2);
+}
+
+.AboutComponentSecondPartEachButton2 {
+  background-color: rgb(220, 66, 0, 0.1);
+}
+
+.AboutComponentSecondPartEachButton3 {
+  background-color: rgb(0, 220, 141, 0.1);
+}
+
+.AboutComponentSecondPartEach > h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.AboutComponentSecondPartEach > div {
+  line-height: 150%;
+}
+
+.AboutComponentThirdPart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #1c140f;
+  padding: 50px 0px;
+  padding-left: 30px;
+}
+
+.AboutComponentThirdPart * {
+  background-color: #1c140f;
+}
+
+.AboutComponentThirdPart > img {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.AboutComponentThirdPartText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+  width: 60%;
+}
+
+.AboutComponentThirdPartText > h2 {
+  line-height: 150%;
+  font-size: 26px;
+}
+
+.AboutComponentThirdPartText > h3 {
+  line-height: 140%;
+  font-weight: 500;
+}
+
+.AboutComponentFourthPart {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.AboutComponentFourthPartEach > img {
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+}
+
+/* section sixth  */
+
+.sectionsixthComponent {
+  margin-bottom: 150px;
+}
+
+.sectionsixthTextContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.sectionsixthTextContent > h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextContent > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * {
+  background-color: #1c140f;
+}
+
+.sectionsixthTextsubscribe * h1 {
+  font-size: 30px;
+}
+
+.sectionsixthTextsubscribe * h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sectionsixthTextsubscribefirst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionsixthTextsubscribesecond > input {
+  padding: 10px 30px;
+  /* background-color: white; */
+  border: 1px solid white;
+}
+
+.sectionsixthTextsubscribesecond > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: #dc7000;
+  color: white;
+}
+
+.sectionsixthTextsubscribesecond {
+  margin-top: 10px;
+}
+.sectionsixthTextsubscribesecond * {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1300px) {
+  .AboutComponent {
+    width: 1000px;
+  }
+
+  .AboutComponentFirstPart {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .AboutComponentSecondPartButtons {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 50px; */
+  }
+
+  .AboutComponentThirdPart {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .AboutComponentFourthPartEach {
+    /* width: 300px;
+    height: 300px; */
+    width: 800px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .AboutComponent {
+    width: 700px;
+  }
+
+  .sectionfourSectionComponent {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .AboutComponentFourthPartEach {
+    /* width: 300px;
+    height: 300px; */
+    width: 500px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .AboutComponent {
+    width: 400px;
+  }
+
+  .AboutComponentFourthPartEach {
+    /* width: 300px;
+    height: 300px; */
+    width: 400px;
+    height: 150px;
+  }
+
+  .AboutComponentFourthPart {
+    padding: 10px;
+  }
+}

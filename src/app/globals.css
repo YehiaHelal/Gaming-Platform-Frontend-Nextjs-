@@ -1,0 +1,328 @@
+:root {
+  /* width: 1100px; */
+  /* margin: 0 auto; */
+  padding: 20px 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
+
+body {
+  /* width: 1600px; */
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* background-color: black; */
+  /* background-color: rgb(234, 236, 238, 0.7); */
+  background-color: #39289f;
+
+  border-radius: 4px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.search-icon-button {
+  background-color: white;
+  border: none;
+}
+
+.search-icon-button:hover {
+  border-bottom: 1px solid blue;
+}
+
+.search-icon-image-and-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ButtonClose {
+  padding: 10px;
+  overflow: visible;
+  position: fixed;
+  right: 55px;
+  top: 100px;
+  z-index: 3;
+
+  /* background-color: rgb(225, 226, 231); */
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.ButtonCloseChat {
+  padding: 10px;
+  overflow: visible;
+  position: fixed;
+  right: 55px;
+  bottom: 110px;
+  z-index: 3;
+
+  /* background-color: rgb(225, 226, 231); */
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.ButtonClose:hover {
+  background-color: rgb(225, 226, 231);
+}
+
+.ButtonCloseLogin {
+  padding: 10px;
+  overflow: visible;
+  position: fixed;
+  /* left: 1715px; */
+  right: 55px;
+  padding: 5px;
+  top: 100px;
+  z-index: 3;
+  /* background-color: rgb(225, 226, 231); */
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.ButtonCloseLogin:hover {
+  background-color: rgb(225, 226, 231);
+}
+
+.ButtonCloseSearchBar {
+  padding: 10px;
+  overflow: visible;
+  position: fixed;
+  right: 55px;
+  padding: 5px;
+  top: 85px;
+  z-index: 3;
+  /* background-color: rgb(225, 226, 231); */
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.ButtonCloseSearchBar:hover {
+  background-color: rgb(225, 226, 231);
+}
+
+.nav {
+  /* width: 1400px; */
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-color: #39289f;
+
+  align-items: center;
+  padding: 10px;
+  /* background-color: rgb(234, 236, 238, 0.7) !important; */
+}
+
+.TitleStyle:hover {
+  border-bottom: 1px solid blue;
+}
+
+.second-part-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.nav-each-part-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-each-part-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav-each-part-two > a {
+  font-size: 18px;
+  color: white;
+}
+
+.nav-each-part-two > a:hover {
+  border-bottom: 1px solid blue;
+}
+
+.nav-each-part-two * svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-each-part-three {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav-each-part-three * {
+  background-color: #fa9021;
+  font-size: 18px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.iconImageTransparent {
+  /* background-color: transparent; */
+  color: transparent;
+}
+
+.Large-Display-nav {
+  display: flex;
+}
+
+/* //////////////////// */
+/* DropDown Logic */
+/* svg and button */
+.svgdropdown {
+  border: none;
+  display: none;
+}
+
+.nav-two-three-InDropDown {
+  display: none;
+}
+
+.nav-each-part-one-InDropDown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 10px;
+}
+.nav-each-part-one-InDropDown > button {
+  padding: 10px;
+}
+
+.nav-each-part-two-InDropDown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.nav-each-part-two-InDropDown * {
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.nav-each-part-two-InDropDown * svg {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  /* background-color: red; */
+}
+
+.nav-each-part-three-InDropDown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+}
+
+/* .nav-each-part-one-InDropDown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+} */
+
+/* .nav-each-part-two-InDropDown > button {
+  display: flex;
+  align-items: flex-end;
+} */
+
+@media screen and (max-width: 1000px) {
+  .nav-two-three-InDropDown {
+    position: absolute;
+    /* right: 0; */
+    right: 10px;
+    top: 100px;
+    /* background-color: white; */
+    border: 1px solid green;
+
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+  }
+
+  .nav-each-part-two-InDropDownsvg > svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    /* display: flex; */
+    color: white;
+    /* background-color: red; */
+  }
+
+  .nav-two-three-InDropDown * {
+    /* background-color: white; */
+    color: white !important;
+    font-size: 18px;
+  }
+
+  .nav-two-three-InDropDown * button {
+    /* background-color: white; */
+    color: white !important;
+    font-size: 14px;
+  }
+
+  .nav-two-three-InDropDown * a {
+    text-decoration: underline;
+  }
+
+  .nav-each-part-two {
+    display: none;
+  }
+  .nav-each-part-three {
+    display: none;
+  }
+
+  .svgdropdown {
+    border: none;
+    display: flex;
+  }
+  .svgdropdown > svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .resetPasswordComponent {
+    width: 400px;
+  }
+  .nav-each-part-two-InDropDownsvg > svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+
+    /* display: flex; */
+    color: white;
+  }
+}
