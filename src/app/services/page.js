@@ -489,9 +489,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push(
-            "https://gaming-platform-frontend-nextjs-czaz.vercel.app/successorder"
-          );
+          push("https://gaming-platform-frontend-next.vercel.app/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.

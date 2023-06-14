@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="https://gaming-platform-frontend-nextjs-czaz.vercel.app/services"
+            href="https://gaming-platform-frontend-next.vercel.app/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page
