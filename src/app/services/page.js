@@ -402,6 +402,14 @@ const BlogPage = () => {
     }
   }, [showCart]);
 
+  useEffect(() => {
+    // pending state to check if the user is clicking on stripe and paying or joking the system
+    if (typeof window !== "undefined") {
+      let pendingstate = false;
+      localStorage.setItem("pendingstatev", JSON.stringify(pendingstate));
+    }
+  }, [showCart]);
+
   // getting the localstorage items
   let getLocalCartItems;
   if (typeof window !== "undefined") {
