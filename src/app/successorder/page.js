@@ -35,6 +35,9 @@ const BlogPage = () => {
   // this is stripe a succesful stripe checkout or failure check state
   const [stripeCheckoutSuccess, setStripeCheckoutSuccess] = useState(false);
 
+  // to reload after stripe success payment or cart place order
+  const [value, setvalue] = useState(1);
+
   // // showing successful after stripe payment is done error check
   // const [errorToPlaceOrder, setErrorToPlaceOrder] = useState();
 
@@ -170,6 +173,8 @@ const BlogPage = () => {
           setStripeCheckoutSuccess(true);
 
           dispatch({ type: "SET_ITEM", payload: emptyarray });
+
+          setvalue(value + 1);
 
           // hide button to avoid duplicate orders
           // setHideOrderButton(true);
