@@ -1358,9 +1358,7 @@ const LoginPage = () => {
                   </div>
                 )}
                 {errorAddingImage && (
-                  <div className={styles.error}>
-                    Error only images are allowed!
-                  </div>
+                  <div className={styles.error}>Error adding image</div>
                 )}
               </div>
 

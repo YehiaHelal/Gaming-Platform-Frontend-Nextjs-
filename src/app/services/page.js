@@ -880,9 +880,9 @@ const BlogPage = () => {
                   height={600}
                   alt="image"
                   className={styles.SecondpartLeftImage}
-                  // src={require(`./../../../public/services/${selectedItemForDetail.name}.png`)}
+                  src={require(`./../../../public/services/${selectedItemForDetail.name}.png`)}
 
-                  src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${selectedItemForDetail.name}.png`}
+                  // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${selectedItemForDetail.name}.png`}
                 ></Image>
                 <div className={styles.SecondpartDetailsPartButton}>
                   <button
@@ -932,9 +932,9 @@ const BlogPage = () => {
                   className={styles.SecondpartLeftImage}
                   // src={require(`./../../../public/services/${allItems[0].image}.jpg`)}
 
-                  // src={require(`./../../../public/services/${allItems[0].name}.png`)}
+                  src={require(`./../../../public/services/${allItems[0].name}.png`)}
 
-                  src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${allItems[0].name}.png`}
+                  // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${allItems[0].name}.png`}
                 ></Image>
                 <div className={styles.SecondpartDetailsPartButton}>
                   <button
@@ -987,9 +987,9 @@ const BlogPage = () => {
                       className={styles.SecondpartRightEachServiceImage}
                       // src={require(`./../../../public/services/${item.image}.jpg`)}
 
-                      // src={require(`./../../../public/services/${allItems[0].name}.png`)}
+                      src={require(`./../../../public/services/${item.name}.png`)}
 
-                      src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                      // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
                     ></Image>
                     <div className={styles.SecondpartDetailsRightPartComponent}>
                       <div className={styles.SecondpartDetailsRightPartTitle}>
@@ -1047,9 +1047,9 @@ const BlogPage = () => {
                     height={300}
                     alt="image"
                     className={styles.SecondpartRightEachServiceImage}
-                    // src={require(`./../../../public/services/${item.image}.jpg`)}
+                    src={require(`./../../../public/services/${item.name}.png`)}
 
-                    src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                    // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
                   ></Image>
                   <div className={styles.CartItemEachAllDetail}>
                     <div>
