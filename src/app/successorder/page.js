@@ -40,75 +40,69 @@ const BlogPage = () => {
 
   // the function of fetching the order number
 
-  // useEffect(() => {
-  //   // if (user) {
+  useEffect(() => {
+    if (user) {
+      const fetchOrderNumber = async (e) => {
+        const submission = {
+          token: user.token,
+        };
 
-  //   // }
+        try {
+          const datas = await axios.post(
+            "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getuserorders",
+            { submission },
+            {
+              withCredentials: true,
+              headers: {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods":
+                  "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+                "Access-Control-Allow-Headers":
+                  "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+              },
+              // headers: {
+              //   "Access-Control-Allow-Origin": "*",
+              //   "Content-Type": "application/json",
+              // },
+            }
+          );
 
-  //   console.log(user);
+          if (datas.status === 200) {
+            // console.log(datas.data);
 
-  if (user) {
-    const fetchOrderNumber = async (e) => {
-      const submission = {
-        token: user.token,
+            if (datas.data.orders) {
+              let n = datas.data.orders;
+
+              let p = n.slice(n.length - 1);
+              // console.log(p);
+
+              // console.log(p[0].ordernumber);
+
+              setOrderNumber(p[0].ordernumber);
+
+              // console.log(p[0].ordernumber);
+
+              handleSendEmailToUserConfirmOrder(p[0].ordernumber);
+            }
+          }
+        } catch (error) {
+          setErrorToPlaceOrder("error");
+          setshowError(true);
+
+          // if there is an error response
+          // console.log(error);
+
+          // if there is an error response
+          // console.log(error.response.data);
+
+          // setErrorSignup(error.response.data.error);
+        }
       };
 
-      try {
-        const datas = await axios.post(
-          "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getuserorders",
-          { submission },
-          {
-            withCredentials: true,
-            headers: {
-              "Access-Control-Allow-Credentials": "true",
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Methods":
-                "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-              "Access-Control-Allow-Headers":
-                "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-            },
-            // headers: {
-            //   "Access-Control-Allow-Origin": "*",
-            //   "Content-Type": "application/json",
-            // },
-          }
-        );
-
-        if (datas.status === 200) {
-          // console.log(datas.data);
-
-          if (datas.data.orders) {
-            let n = datas.data.orders;
-
-            let p = n.slice(n.length - 1);
-            // console.log(p);
-
-            // console.log(p[0].ordernumber);
-
-            setOrderNumber(p[0].ordernumber);
-
-            // console.log(p[0].ordernumber);
-
-            handleSendEmailToUserConfirmOrder(p[0].ordernumber);
-          }
-        }
-      } catch (error) {
-        setErrorToPlaceOrder("error");
-        setshowError(true);
-
-        // if there is an error response
-        // console.log(error);
-
-        // if there is an error response
-        // console.log(error.response.data);
-
-        // setErrorSignup(error.response.data.error);
-      }
-    };
-
-    fetchOrderNumber();
-  }
-  // }, []);
+      fetchOrderNumber();
+    }
+  }, []);
 
   useEffect(() => {
     const localStoragependingstate = JSON.parse(
