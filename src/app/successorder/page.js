@@ -55,7 +55,7 @@ const BlogPage = () => {
 
       try {
         const datas = await axios.post(
-          "https://gaming-platform-backend-node.vercel.app/api/orders/getuserorders",
+          "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/orders/getuserorders",
           { submission },
           {
             withCredentials: true,
@@ -136,7 +136,7 @@ const BlogPage = () => {
       // fetch request
       try {
         const datas = await axios.post(
-          "https://gaming-platform-backend-node.vercel.app/api/orders/cartorder",
+          "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/orders/cartorder",
           { submission },
           {
             withCredentials: true,
@@ -226,7 +226,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/mail/emailorderplaced",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/mail/emailorderplaced",
         {
           submission,
         },

@@ -143,7 +143,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/openchat/",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/openchat/",
         {
           submission,
         },
@@ -261,7 +261,7 @@ const Chat = (props) => {
   //   // fetch request
   //   try {
   //     const datas = await axios.post(
-  //       "https://gaming-platform-backend-node.vercel.app/api/users/openchat/",
+  //       "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/openchat/",
   //       {
   //         submission,
   //       },
@@ -382,7 +382,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/getmessages/",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/getmessages/",
         {
           submission,
         },
@@ -529,7 +529,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/sendingchat/",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/sendingchat/",
         {
           submission,
         },

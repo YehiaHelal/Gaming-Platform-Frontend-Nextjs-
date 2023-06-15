@@ -136,7 +136,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/dashboarddata",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/dashboarddata",
         formData,
         {
           withCredentials: true,
@@ -201,7 +201,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gaming-platform-backend-node.vercel.app/api/items",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/items",
 
         {
           withCredentials: true,
@@ -280,7 +280,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/items/addproduct/",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/items/addproduct/",
 
         formData,
 
@@ -377,7 +377,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/items/deleteproduct",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/items/deleteproduct",
 
         { submission },
 
@@ -498,7 +498,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/items/editproduct",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/items/editproduct",
 
         formData,
 

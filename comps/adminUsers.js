@@ -163,7 +163,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/getallusers",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/getallusers",
         formData,
         {
           withCredentials: true,
@@ -233,7 +233,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/getallorders",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -311,7 +311,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/addnotetouser",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/addnotetouser",
 
         submission,
 
@@ -379,7 +379,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/Users/deleteuser",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/Users/deleteuser",
 
         { submission },
 
@@ -486,7 +486,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/deactivateuser",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/deactivateuser",
 
         { submission },
 
@@ -602,7 +602,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/updateuserinfo",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/updateuserinfo",
 
         formData,
 
@@ -695,7 +695,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/users/adduseradmin",
+        "https://gaming-platform-backend-node-d7xn88c0u-enstein01.vercel.app/api/users/adduseradmin",
 
         { submission },
 
