@@ -41,10 +41,12 @@ const BlogPage = () => {
   // the function of fetching the order number
 
   useEffect(() => {
-    if (user) {
+    const userCheck = JSON.parse(localStorage.getItem("Gaminguser"));
+
+    if (userCheck) {
       const fetchOrderNumber = async (e) => {
         const submission = {
-          token: user.token,
+          token: userCheck.token,
         };
 
         try {
