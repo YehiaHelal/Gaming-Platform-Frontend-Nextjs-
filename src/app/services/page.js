@@ -169,9 +169,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items"
-      );
+      const response = await fetch("http://localhost:4000/api/items");
 
       const item = await response.json();
 
@@ -356,7 +354,7 @@ const BlogPage = () => {
         // fetch request
         try {
           const datas = await axios.post(
-            "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/getndata/",
+            "http://localhost:4000/api/users/getndata/",
             formData,
             {
               withCredentials: true,
@@ -456,7 +454,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/cartorder",
+        "http://localhost:4000/api/orders/cartorder",
         { submission },
         {
           withCredentials: true,
@@ -503,7 +501,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("https://gaming-platform-frontend-next.vercel.app/successorder");
+          push("http://localhost:3000/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
@@ -539,7 +537,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+        "http://localhost:4000/api/items/itemsImages",
 
         {
           withCredentials: true,
