@@ -486,8 +486,16 @@ const LoginPage = () => {
     // formData.append("photo", selectedImage);
 
     if (
-      !JSON.parse(localStorage.getItem("Gaminguser")) &&
-      !Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
+      !JSON.parse(localStorage.getItem("Gaminguser"))
+
+      // localStoragechecking !== undefined
+      //  &&
+      // Object.keys(localStoragechecking).length > 1
+    ) {
+      return;
+    }
+    if (
+      Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
 
       // localStoragechecking !== undefined
       //  &&
@@ -524,7 +532,6 @@ const LoginPage = () => {
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
             // "Content-Type": "application/json",
             // "Content-Type": "multipart/form-data",
-            "Content-Type": "application/x-www-form-urlencoded",
           },
           // headers: {
           //   "Access-Control-Allow-Origin": "*",
@@ -579,7 +586,26 @@ const LoginPage = () => {
 
     // console.log(name);
     // console.log(email);
-    // console.log(password);
+    console.log("password");
+
+    if (
+      !JSON.parse(localStorage.getItem("Gaminguser"))
+
+      // localStoragechecking !== undefined
+      //  &&
+      // Object.keys(localStoragechecking).length > 1
+    ) {
+      return;
+    }
+    if (
+      Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
+
+      // localStoragechecking !== undefined
+      //  &&
+      // Object.keys(localStoragechecking).length > 1
+    ) {
+      return;
+    }
 
     const formData = new FormData();
 
