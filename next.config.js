@@ -10,11 +10,20 @@ const nextConfig = {
     // Important: return the modified config
     return config;
   },
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "https",
+  //       hostname: "next-ecommerce-s3.s3.eu-north-1.amazonaws.com",
+  //     },
+  //   ],
+  // },
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "next-ecommerce-s3.s3.eu-north-1.amazonaws.com",
+        hostname:
+          "gaming-platform-backend-node-git-master-enstein01.vercel.app",
       },
     ],
   },
