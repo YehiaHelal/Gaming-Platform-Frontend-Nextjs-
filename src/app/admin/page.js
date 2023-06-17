@@ -992,7 +992,7 @@ const Admin = () => {
                 </button>
               </div>
             )}
-            {ShowAllItems && (
+            {ShowAllItems && AllItemsImages && (
               <div className={styles.ALLITEMSComponent}>
                 {AllItems &&
                   AllItems.map((item, i) => {
@@ -1160,58 +1160,61 @@ const Admin = () => {
               </div>
             )}
 
-            {showDeleteProductCom && AllItems && itemSelectedInDeleteCom && (
-              <div className={styles.DeleteProductItemComponent}>
-                <div className={styles.ALLITEMS}>
-                  <Image
-                    alt="image"
-                    className={styles.productItemImage}
-                    // src={require(`./../../../public/Items/${item.name}.png`)}
-                    // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInDeleteCom.name}.png`}
+            {showDeleteProductCom &&
+              AllItems &&
+              itemSelectedInDeleteCom &&
+              AllItemsImages && (
+                <div className={styles.DeleteProductItemComponent}>
+                  <div className={styles.ALLITEMS}>
+                    <Image
+                      alt="image"
+                      className={styles.productItemImage}
+                      // src={require(`./../../../public/Items/${item.name}.png`)}
+                      // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInDeleteCom.name}.png`}
 
-                    src={AllItemsImages[itemSelectedInDeleteCom.name]}
-                    // className="iconImage"
-                    width={300}
-                    height={300}
-                  ></Image>
-                  <div>{itemSelectedInDeleteCom.name}</div>
-                  <div>{itemSelectedInDeleteCom.price}$</div>
-                </div>
+                      src={AllItemsImages[itemSelectedInDeleteCom.name]}
+                      // className="iconImage"
+                      width={300}
+                      height={300}
+                    ></Image>
+                    <div>{itemSelectedInDeleteCom.name}</div>
+                    <div>{itemSelectedInDeleteCom.price}$</div>
+                  </div>
 
-                <button
-                  onClick={() => {
-                    setCheckBeforeDelete(true);
-                  }}
-                >
-                  Delete Product
-                </button>
+                  <button
+                    onClick={() => {
+                      setCheckBeforeDelete(true);
+                    }}
+                  >
+                    Delete Product
+                  </button>
 
-                {checkBeforeDelete && (
-                  <div className={styles.checkingBeforeDelete}>
-                    <div>Are you sure you want to delete Product ?</div>
-                    <div>
-                      <button onClick={HandleDeleteAProduct}>Yes</button>
-                      <button
-                        onClick={() => {
-                          if (checkBeforeDelete) setCheckBeforeDelete(false);
-                        }}
-                      >
-                        No
-                      </button>
+                  {checkBeforeDelete && (
+                    <div className={styles.checkingBeforeDelete}>
+                      <div>Are you sure you want to delete Product ?</div>
+                      <div>
+                        <button onClick={HandleDeleteAProduct}>Yes</button>
+                        <button
+                          onClick={() => {
+                            if (checkBeforeDelete) setCheckBeforeDelete(false);
+                          }}
+                        >
+                          No
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {successfulInDeleteProduct && (
-                  <div className={styles.successRequest}>
-                    Product was Deleted successfully
-                  </div>
-                )}
-                {errorDeleteProduct && (
-                  <div className={styles.error}>{errorDeleteProduct}</div>
-                )}
-              </div>
-            )}
+                  {successfulInDeleteProduct && (
+                    <div className={styles.successRequest}>
+                      Product was Deleted successfully
+                    </div>
+                  )}
+                  {errorDeleteProduct && (
+                    <div className={styles.error}>{errorDeleteProduct}</div>
+                  )}
+                </div>
+              )}
 
             {showEditProductCom && AllItems && (
               <div className={styles.DeleteProductComponent}>
@@ -1335,33 +1338,36 @@ const Admin = () => {
                   </div>
                 </form>
 
-                {showEditProductCom && AllItems && itemSelectedInEditCom && (
-                  <div className={styles.DeleteProductItemComponent}>
-                    <div className={styles.ALLITEMS}>
-                      <Image
-                        alt="image"
-                        className={styles.productItemImage}
-                        // src={require(`./../../../public/Items/${item.name}.png`)}
-                        // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`}
-                        src={AllItemsImages[itemSelectedInEditCom.name]}
-                        // className="iconImage"
-                        width={300}
-                        height={300}
-                      ></Image>
-                      <div>{itemSelectedInEditCom.name}</div>
-                      <div>{itemSelectedInEditCom.price}$</div>
-                    </div>
-
-                    {successfulEditProduct && (
-                      <div className={styles.successRequest}>
-                        Product was Edited successfully
+                {showEditProductCom &&
+                  AllItems &&
+                  itemSelectedInEditCom &&
+                  AllItemsImages && (
+                    <div className={styles.DeleteProductItemComponent}>
+                      <div className={styles.ALLITEMS}>
+                        <Image
+                          alt="image"
+                          className={styles.productItemImage}
+                          // src={require(`./../../../public/Items/${item.name}.png`)}
+                          // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`}
+                          src={AllItemsImages[itemSelectedInEditCom.name]}
+                          // className="iconImage"
+                          width={300}
+                          height={300}
+                        ></Image>
+                        <div>{itemSelectedInEditCom.name}</div>
+                        <div>{itemSelectedInEditCom.price}$</div>
                       </div>
-                    )}
-                    {errorEditProduct && (
-                      <div className={styles.error}>{errorEditProduct}</div>
-                    )}
-                  </div>
-                )}
+
+                      {successfulEditProduct && (
+                        <div className={styles.successRequest}>
+                          Product was Edited successfully
+                        </div>
+                      )}
+                      {errorEditProduct && (
+                        <div className={styles.error}>{errorEditProduct}</div>
+                      )}
+                    </div>
+                  )}
               </div>
             )}
           </div>
