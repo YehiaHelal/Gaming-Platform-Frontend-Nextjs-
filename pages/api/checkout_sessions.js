@@ -54,8 +54,8 @@ export default async function handler(req, res) {
         mode: "payment",
         success_url: `${req.headers.origin}/successorder`,
         cancel_url: `${req.headers.origin}/failure`,
-        // success_url: `http://localhost:3000/successorders`,
-        // cancel_url: `http://localhost:3000/order`,
+        // success_url: `https://gaming-platform-frontend-next.vercel.app/successorders`,
+        // cancel_url: `https://gaming-platform-frontend-next.vercel.app/order`,
       });
       res.json({ sessionURL: session.url });
     } catch (err) {

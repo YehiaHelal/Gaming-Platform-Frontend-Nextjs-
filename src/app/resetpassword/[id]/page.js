@@ -50,12 +50,12 @@ const ResetPassword = ({ params }) => {
       token: params.id,
     };
 
-    // "http://localhost:4000/api/mail/",
+    // "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/mail/",
 
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/resetpassword/",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/resetpassword/",
         {
           submission,
         },
