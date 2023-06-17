@@ -524,6 +524,7 @@ const LoginPage = () => {
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
             // "Content-Type": "application/json",
             // "Content-Type": "multipart/form-data",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           // headers: {
           //   "Access-Control-Allow-Origin": "*",
