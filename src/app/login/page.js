@@ -1569,11 +1569,7 @@ const LoginPage = () => {
                 <label className={styles.imageuploadLabelInput} for="image">
                   Upload image
                 </label>
-                <button
-                  onClick={() => {
-                    handleFetchingImagesFromBackend();
-                  }}
-                ></button>
+
                 {selectedImage && (
                   <Image
                     width={200}
