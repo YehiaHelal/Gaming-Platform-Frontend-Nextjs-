@@ -429,7 +429,7 @@ const LoginPage = () => {
         }
       );
 
-      // console.log(datas);
+      console.log(datas);
 
       if (datas.status === 200) {
         setAddedImageSuccessfully(true);
