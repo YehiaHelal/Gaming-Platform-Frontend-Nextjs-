@@ -961,7 +961,7 @@ const BlogPage = () => {
             </div>
           </div>
           <div className={styles.SecondpartComponent}>
-            {selectedItemForDetail && (
+            {selectedItemForDetail && AllItemsImages && (
               <div className={styles.SecondpartDetailsPart}>
                 <Image
                   width={600}
@@ -1012,7 +1012,7 @@ const BlogPage = () => {
             {/* allItems */}
             {/* {!selectedItemForDetail && <div>Loading</div>} */}
 
-            {!selectedItemForDetail && allItems[0] && (
+            {!selectedItemForDetail && allItems[0] && AllItemsImages && (
               <div className={styles.SecondpartDetailsPart}>
                 <Image
                   width={600}
@@ -1064,59 +1064,62 @@ const BlogPage = () => {
             )}
 
             <div className={styles.SecondpartDetailsRightComponent}>
-              {showSortedFiltered.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={styles.SecondpartDetailsRightPart}
-                  >
-                    <Image
-                      width={300}
-                      height={300}
-                      alt="image"
-                      className={styles.SecondpartRightEachServiceImage}
-                      // src={require(`./../../../public/services/${item.image}.jpg`)}
+              {AllItemsImages &&
+                showSortedFiltered.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={styles.SecondpartDetailsRightPart}
+                    >
+                      <Image
+                        width={300}
+                        height={300}
+                        alt="image"
+                        className={styles.SecondpartRightEachServiceImage}
+                        // src={require(`./../../../public/services/${item.image}.jpg`)}
 
-                      // src={require(`./../../../public/services/${item.name}.jpg`)}
-                      src={AllItemsImages[item.name]}
+                        // src={require(`./../../../public/services/${item.name}.jpg`)}
+                        src={AllItemsImages[item.name]}
 
-                      // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
-                    ></Image>
-                    <div className={styles.SecondpartDetailsRightPartComponent}>
-                      <div className={styles.SecondpartDetailsRightPartTitle}>
-                        <button
-                          onClick={() => {
-                            // const numberofitemforvalue = JSON.parse(
-                            //   localStorage.getItem("GamingcartItems")
-                            // );
+                        // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                      ></Image>
+                      <div
+                        className={styles.SecondpartDetailsRightPartComponent}
+                      >
+                        <div className={styles.SecondpartDetailsRightPartTitle}>
+                          <button
+                            onClick={() => {
+                              // const numberofitemforvalue = JSON.parse(
+                              //   localStorage.getItem("GamingcartItems")
+                              // );
 
-                            const numberofitemforvalue = JSON.parse(
-                              localStorage.getItem("GamingcartItems")
-                            );
+                              const numberofitemforvalue = JSON.parse(
+                                localStorage.getItem("GamingcartItems")
+                              );
 
-                            setaddItemToCart(item);
-                            setChangeValue(changeValue + 1);
+                              setaddItemToCart(item);
+                              setChangeValue(changeValue + 1);
 
-                            // dispatch({ type: "ADD", payload: itemsFetched });
-                          }}
-                        >
-                          Add to cart
-                        </button>
-                        <button
-                          onClick={() => {
-                            setselectedItemForDetail(item);
-                          }}
-                        >
-                          Check details
-                        </button>
-                        <div>.2h eta</div>
+                              // dispatch({ type: "ADD", payload: itemsFetched });
+                            }}
+                          >
+                            Add to cart
+                          </button>
+                          <button
+                            onClick={() => {
+                              setselectedItemForDetail(item);
+                            }}
+                          >
+                            Check details
+                          </button>
+                          <div>.2h eta</div>
+                        </div>
+                        <h2>{item.name} </h2>
+                        <h2>${item.price} </h2>
                       </div>
-                      <h2>{item.name} </h2>
-                      <h2>${item.price} </h2>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
 
               <div className={styles.Secondpartpagination}>
                 <button>1</button>
@@ -1127,7 +1130,7 @@ const BlogPage = () => {
         </div>
       )}
 
-      {showCart && getLocalCartItems && (
+      {showCart && getLocalCartItems && AllItemsImages && (
         <div className={styles.CartComponent}>
           <div className={styles.SecondpartDetailsRightComponent}>
             {getLocalCartItems.map((item, index) => {
