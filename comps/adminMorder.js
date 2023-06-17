@@ -143,7 +143,7 @@ const MangeOrders = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/getallorders",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -215,7 +215,7 @@ const MangeOrders = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gaming-platform-backend-node.vercel.app/api/items/itemsImages",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -298,7 +298,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/orderaddnote/",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/orderaddnote/",
 
         { submission },
 
@@ -366,7 +366,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/deleteorder",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/deleteorder",
 
         { submission },
 
@@ -473,7 +473,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/markordercompleted",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/markordercompleted",
 
         { submission },
 
@@ -586,7 +586,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node.vercel.app/api/orders/updateOrder",
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/updateOrder",
 
         formData,
 

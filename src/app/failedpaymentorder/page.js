@@ -33,7 +33,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "https://gaming-platform-backend-node.vercel.app/api/orders/getuserorders",
+            "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getuserorders",
             formData,
             {
               withCredentials: true,
