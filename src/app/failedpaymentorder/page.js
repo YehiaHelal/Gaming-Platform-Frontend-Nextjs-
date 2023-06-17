@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="https://gaming-platform-frontend-next.vercel.app/services"
+            href="https://sprightly-queijadas-dc931f.netlify.app/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page
