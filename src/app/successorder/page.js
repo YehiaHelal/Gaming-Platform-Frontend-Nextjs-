@@ -173,11 +173,11 @@ const BlogPage = () => {
 
           console.log(datas.data);
 
-          setOrderNumber(datas.message.ordernumber);
+          setOrderNumber(datas.data.message.ordernumber);
 
           // console.log(p[0].ordernumber);
 
-          handleSendEmailToUserConfirmOrder(datas.message.ordernumber);
+          handleSendEmailToUserConfirmOrder(datas.data.message.ordernumber);
 
           // hide button to avoid duplicate orders
           // setHideOrderButton(true);

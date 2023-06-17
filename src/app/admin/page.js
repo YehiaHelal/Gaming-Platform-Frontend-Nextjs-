@@ -30,6 +30,11 @@ const Admin = () => {
   // All Items Fetch
   const [AllItems, setAllItems] = useState();
 
+  // Set All Items Images Fetch
+  const [AllItemsImages, setAllItemsImages] = useState();
+
+  // console.log(AllItemsImages);
+
   // Show All Items Fetch Condition
   const [ShowAllItems, setShowAllItems] = useState(false);
 
@@ -232,6 +237,73 @@ const Admin = () => {
         // console.log(datas.data);
 
         setAllItems(datas.data);
+
+        // setTimeout(() => {
+        //   setShowAllItems(true);
+        // }, 500);
+
+        // console.log("data");
+        // SetUserdataNameAddress(datas.data);
+      }
+    } catch (error) {
+      // console.log("error");
+      // if there is an error response
+      // console.log(error);
+      // if there is an error response
+      // console.log(error.response.data);
+      // setErrorSignup(error.response.data.error);
+    }
+  };
+
+  // Handle Get All Items Images
+  const handleGetAllImages = async () => {
+    // e.preventDefault();
+
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
+
+    // fetch request
+    try {
+      const datas = await axios.get(
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // if (submission.message.length < 10) {
+      //   return { error: "Message must be over 10 chars long." };
+      // }
+
+      // console.log(datas);
+
+      // check response if ok
+      // console.log(datas.status === 200);
+
+      if (datas.status === 200) {
+        // console.log(datas.data);
+
+        // console.log(datas);
+        // setAllItems(datas.data);
+
+        setAllItemsImages(datas.data.images);
 
         // setTimeout(() => {
         //   setShowAllItems(true);
@@ -467,12 +539,12 @@ const Admin = () => {
     }
 
     // for item name change and not changing item, will have to change s3 bucket name because we are dependent on name to fetch image so..
-    const ItemSelectedUrl = `https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`;
+    // const ItemSelectedUrl = `https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`;
 
     const formData = new FormData();
 
     formData.append("selectedItem", itemSelectedInEditCom.name);
-    formData.append("selectedItemUrl", ItemSelectedUrl);
+    // formData.append("selectedItemUrl", ItemSelectedUrl);
 
     if (selectedImageToEdit) {
       formData.append("photo", selectedImageToEdit);
@@ -827,6 +899,7 @@ const Admin = () => {
                 }}
                 onClick={() => {
                   handleGetAllItems();
+                  handleGetAllImages();
                   setShowAllItems(true);
                   setShowAddProductCom(false);
                   setShowDeleteProductCom(false);
@@ -922,14 +995,16 @@ const Admin = () => {
             {ShowAllItems && (
               <div className={styles.ALLITEMSComponent}>
                 {AllItems &&
-                  AllItems.map((item) => {
+                  AllItems.map((item, i) => {
                     return (
                       <div key={item._id} className={styles.ALLITEMS}>
                         <Image
                           alt="image"
                           className={styles.productItemImage}
                           // src={require(`./../../../public/Items/${item.name}.png`)}
-                          src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                          // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                          // {AllItemsImages.map()}
+                          src={AllItemsImages[item.name]}
                           // className="iconImage"
                           width={300}
                           height={300}
@@ -1092,7 +1167,9 @@ const Admin = () => {
                     alt="image"
                     className={styles.productItemImage}
                     // src={require(`./../../../public/Items/${item.name}.png`)}
-                    src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInDeleteCom.name}.png`}
+                    // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInDeleteCom.name}.png`}
+
+                    src={AllItemsImages[itemSelectedInDeleteCom.name]}
                     // className="iconImage"
                     width={300}
                     height={300}
@@ -1182,7 +1259,7 @@ const Admin = () => {
                       // id="roll"
                       name="name"
                       minlength="1"
-                      maxlength="25"
+                      maxlength="50"
                       value={ResetNameValueEdit}
                       onChange={(e) => {
                         setResetNameValueEdit(e.target.value);
@@ -1195,7 +1272,7 @@ const Admin = () => {
                       type="number"
                       name="price"
                       minlength="1"
-                      maxlength="6"
+                      maxlength="15"
                       value={ResetPriceValueEdit}
                       onChange={(e) => {
                         setResetPriceValueEdit(e.target.value);
@@ -1265,7 +1342,8 @@ const Admin = () => {
                         alt="image"
                         className={styles.productItemImage}
                         // src={require(`./../../../public/Items/${item.name}.png`)}
-                        src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`}
+                        // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${itemSelectedInEditCom.name}.png`}
+                        src={AllItemsImages[itemSelectedInEditCom.name]}
                         // className="iconImage"
                         width={300}
                         height={300}

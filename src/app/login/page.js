@@ -60,6 +60,11 @@ const LoginPage = () => {
   // Handle Image upload and sending to the backend
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Handle base 64 image recieve
+  const [Base64Image, setBase64Image] = useState();
+
+  // console.log(Base64Image);
+
   // Image was added successfully, from the backend confirms
   const [addedImageSuccessfully, setAddedImageSuccessfully] = useState(false);
 
@@ -136,7 +141,8 @@ const LoginPage = () => {
   // set token and user value
   const [tokenValue, SetTokenValue] = useState();
 
-  // console.log(tokenValue);
+  // Set All Items Images Fetch
+  const [AllItemsImages, setAllItemsImages] = useState();
 
   // to check if there is a token to log in user automatically
   useEffect(() => {
@@ -200,6 +206,7 @@ const LoginPage = () => {
 
       setTimeout(() => {
         handleGetUserData();
+        handleFetchingImagesFromBackend();
       }, 1000);
     } else {
       // setLogin(false);
@@ -237,9 +244,11 @@ const LoginPage = () => {
     // }
   }, []);
 
+  // if data isn't being updated right we fetch again ..
   useEffect(() => {
     if (showProfileAndLogout) {
       handleGetUserData();
+      handleFetchingImagesFromBackend();
     }
   }, [showProfileAndLogout]);
 
@@ -430,6 +439,7 @@ const LoginPage = () => {
         setTimeout(() => {
           setSelectedImage(null);
           setFullNameImage("");
+          handleFetchingImagesFromBackend();
         }, 500);
 
         setTimeout(() => {
@@ -449,6 +459,110 @@ const LoginPage = () => {
       setTimeout(() => {
         setErrorAddingImage("");
       }, 3000);
+    }
+  };
+
+  // fetching images from backend
+
+  // sending image function v2 route
+
+  const handleFetchingImagesFromBackend = async (e) => {
+    // e.prevent Default();
+
+    console.log("here");
+
+    // console.log("inside");
+
+    // console.log(user.user);
+
+    // const submission = {
+    //   email: e.target.email.value,
+    //   password: e.target.password.value,
+    //   name: e.target.name.value,
+    //   address: e.target.address.value,
+    // };
+
+    const formData = new FormData();
+    // formData.append("photo", selectedImage);
+
+    if (
+      !JSON.parse(localStorage.getItem("Gaminguser")) &&
+      !Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
+
+      // localStoragechecking !== undefined
+      //  &&
+      // Object.keys(localStoragechecking).length > 1
+    ) {
+      return;
+    }
+
+    console.log("passed");
+
+    const tokenUser = JSON.parse(localStorage.getItem("Gaminguser"));
+
+    formData.append("jwt", tokenUser.token);
+
+    // uploadprofileimgtos3
+    try {
+      const datas = await axios.post(
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/imagesendingtofe/",
+
+        formData,
+
+        // {
+        //   headers: {
+        //     "Content-Type": "multipart/form-data",
+        //   },
+        // }
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // console.log(datas);
+
+      // console.log("hey");
+
+      if (datas.status === 200) {
+        // setAddedImageSuccessfully(true);
+
+        // console.log(datas);
+
+        setBase64Image(datas.data.images);
+
+        // setTimeout(() => {
+        //   setSelectedImage(null);
+        //   setFullNameImage("");
+        // }, 500);
+
+        // setTimeout(() => {
+        //   SetErrorFetchingImage(false);
+        // }, 1000);
+
+        // setTimeout(() => {
+        //   setAddedImageSuccessfully(false);
+        //   SetErrorFetchingImage(false);
+        // }, 2000);
+      }
+    } catch (error) {
+      console.log(error);
+
+      // setErrorAddingImage("error");
+
+      // setTimeout(() => {
+      //   setErrorAddingImage("");
+      // }, 3000);
     }
   };
 
@@ -595,6 +709,80 @@ const LoginPage = () => {
           // setShowSignup(false);
           // setSuccessfulSignup(false);
         }, 2000);
+      }
+    } catch (error) {
+      // console.log("error");
+      // if there is an error response
+      // console.log(error);
+      // if there is an error response
+      // console.log(error.response.data);
+      // setErrorSignup(error.response.data.error);
+    }
+  };
+
+  // Handle Get All Items Images
+  const handleGetAllImages = async () => {
+    // e.preventDefault();
+
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
+
+    console.log("images we are getting");
+
+    if (AllItemsImages) {
+      console.log("there is images already");
+      return;
+    }
+
+    // fetch request
+    try {
+      const datas = await axios.get(
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // if (submission.message.length < 10) {
+      //   return { error: "Message must be over 10 chars long." };
+      // }
+
+      // console.log(datas);
+
+      // check response if ok
+      // console.log(datas.status === 200);
+
+      if (datas.status === 200) {
+        // console.log(datas.data);
+
+        // console.log(datas);
+        // setAllItems(datas.data);
+
+        setAllItemsImages(datas.data.images);
+
+        // setTimeout(() => {
+        //   setShowAllItems(true);
+        // }, 500);
+
+        // console.log("data");
+        // SetUserdataNameAddress(datas.data);
       }
     } catch (error) {
       // console.log("error");
@@ -1264,7 +1452,30 @@ const LoginPage = () => {
               {!userdataNameAddress && <div>Welcome </div>}
 
               <div className={styles.profileImage}>
-                <Image
+                {Base64Image && (
+                  <Image
+                    width={100}
+                    height={100}
+                    alt="image"
+                    id="image-true"
+                    className={styles.ImageConfirmUploadImage}
+                    src={Base64Image}
+                    // src={URL.createObjectURL(Base64Image)}
+                  ></Image>
+                )}
+
+                {!Base64Image && (
+                  <Image
+                    width={100}
+                    height={100}
+                    alt="image"
+                    id="image-true"
+                    className={styles.ImageConfirmUploadImage}
+                    src={require(`./../../../public/users/images/default.jpeg`)}
+                  ></Image>
+                )}
+
+                {/* <Image
                   width={100}
                   height={100}
                   alt="image"
@@ -1299,7 +1510,7 @@ const LoginPage = () => {
                     //     }.png?${Date.now()}`
                   }
                   // src={defaultImage}
-                ></Image>
+                ></Image> */}
 
                 {/* {true && (
                 <Image
@@ -1329,6 +1540,11 @@ const LoginPage = () => {
                 <label className={styles.imageuploadLabelInput} for="image">
                   Upload image
                 </label>
+                <button
+                  onClick={() => {
+                    handleFetchingImagesFromBackend();
+                  }}
+                ></button>
                 {selectedImage && (
                   <Image
                     width={200}
@@ -1338,6 +1554,7 @@ const LoginPage = () => {
                     src={URL.createObjectURL(selectedImage)}
                   ></Image>
                 )}
+
                 {/* {selectedImage && (
                 <button onClick={handleSendingImage}>
                   Confirm Upload Image
@@ -1345,12 +1562,27 @@ const LoginPage = () => {
               )} */}
                 {selectedImage && (
                   <button
-                    onClick={handleSendingImageToS3Bucket}
+                    onClick={() => {
+                      handleSendingImageToS3Bucket();
+                      // setTimeout(() => {
+                      //   handleFetchingImagesFromBackend();
+                      // }, 1000);
+                    }}
                     className={styles.ConfirmUploadImage}
                   >
                     Confirm Upload Image
                   </button>
                 )}
+
+                {/* {Base64Image && (
+                  <Image
+                    width={200}
+                    height={200}
+                    alt="image"
+                    className={styles.ImageConfirmUploadImage}
+                    src={Base64Image}
+                  ></Image>
+                )} */}
 
                 {addedImageSuccessfully && (
                   <div className={styles.successRequest}>
@@ -1366,6 +1598,7 @@ const LoginPage = () => {
                 onClick={() => {
                   SetShowGetPastOrders(true);
                   handleGetUserPastOrders();
+                  handleGetAllImages();
                 }}
               >
                 View my past orders
@@ -1649,50 +1882,57 @@ const LoginPage = () => {
                   </div>
                 );
               })}
-            {showGetPastOrdersEachOrder && orderSelectedToShow && (
-              <div className={styles.ItemStylesComponentOrdersComponent}>
-                {orderSelectedToShow.orderProducts.map((item) => {
-                  return (
-                    <div
-                      key={item._id}
-                      className={styles.ItemStylesComponentOrders}
-                    >
-                      <Link href={"/collections/" + item._id}>
-                        <Image
-                          alt="image"
-                          // src={require(`./../../frontend/public/Items/${item.name}.png`)}
-                          src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
-                          width={300}
-                          height={300}
-                          // className="iconImage"
-                        ></Image>
-                      </Link>
+            {showGetPastOrdersEachOrder &&
+              orderSelectedToShow &&
+              AllItemsImages && (
+                <div className={styles.ItemStylesComponentOrdersComponent}>
+                  {orderSelectedToShow.orderProducts.map((item) => {
+                    return (
+                      <div
+                        key={item._id}
+                        className={styles.ItemStylesComponentOrders}
+                      >
+                        <Link href={"/collections/" + item._id}>
+                          <Image
+                            alt="image"
+                            // src={require(`./../../frontend/public/Items/${item.name}.png`)}
+                            // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                            src={AllItemsImages[item.name]}
+                            width={300}
+                            height={300}
+                            // className="iconImage"
+                          ></Image>
+                        </Link>
 
-                      <div>
-                        <div> {item.name} /50 gram</div>
-                      </div>
+                        <div>
+                          <div> {item.name} /50 gram</div>
+                        </div>
 
-                      <div>
-                        <div className={styles.ItemStylesComponentOrdersPrice}>
-                          <div>quantity: </div>
-                          <div>{item.numberofitem}</div>
-                        </div>
-                        <div className={styles.ItemStylesComponentOrdersPrice}>
-                          <div>price: </div>
-                          <div>${item.price}</div>
+                        <div>
+                          <div
+                            className={styles.ItemStylesComponentOrdersPrice}
+                          >
+                            <div>quantity: </div>
+                            <div>{item.numberofitem}</div>
+                          </div>
+                          <div
+                            className={styles.ItemStylesComponentOrdersPrice}
+                          >
+                            <div>price: </div>
+                            <div>${item.price}</div>
+                          </div>
                         </div>
                       </div>
+                    );
+                  })}
+
+                  <div>
+                    <div className={styles.ItemStylesComponentTotalPrice}>
+                      Order total price: {orderSelectedToShow.orderTotalValue}
                     </div>
-                  );
-                })}
-
-                <div>
-                  <div className={styles.ItemStylesComponentTotalPrice}>
-                    Order total price: {orderSelectedToShow.orderTotalValue}
                   </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         )}
 

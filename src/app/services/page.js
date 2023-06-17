@@ -90,6 +90,11 @@ const BlogPage = () => {
   // show to user that added to Subscribed Email service test ^ _ ^
   const [showSubscribedTrue, setShowSubscribedTrue] = useState(false);
 
+  // Set All Items Images Fetch
+  const [AllItemsImages, setAllItemsImages] = useState();
+
+  console.log(AllItemsImages);
+
   useEffect(() => {
     if (addItemToCart !== undefined) {
       const localStoragecurrentItems = JSON.parse(
@@ -180,6 +185,7 @@ const BlogPage = () => {
     };
 
     fetchItems();
+    handleGetAllImages();
   }, [showCart]);
 
   // Dealing with the Filters and Sorting and pagination
@@ -502,6 +508,80 @@ const BlogPage = () => {
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
         }, 1500);
+      }
+    } catch (error) {
+      // console.log("error");
+      // if there is an error response
+      // console.log(error);
+      // if there is an error response
+      // console.log(error.response.data);
+      // setErrorSignup(error.response.data.error);
+    }
+  };
+
+  // Handle Get All Items Images
+  const handleGetAllImages = async () => {
+    // e.preventDefault();
+
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
+
+    if (AllItemsImages) {
+      console.log("there is images already");
+      return;
+    }
+
+    // fetch request
+    try {
+      const datas = await axios.get(
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // if (submission.message.length < 10) {
+      //   return { error: "Message must be over 10 chars long." };
+      // }
+
+      // console.log(datas);
+
+      // check response if ok
+      // console.log(datas.status === 200);
+
+      if (datas.status === 200) {
+        // console.log(datas.data);
+
+        // console.log(datas);
+        // setAllItems(datas.data);
+
+        console.log("fetched");
+
+        setAllItemsImages(datas.data.images);
+
+        // setTimeout(() => {
+        //   setShowAllItems(true);
+        // }, 500);
+
+        // console.log("data");
+        // SetUserdataNameAddress(datas.data);
       }
     } catch (error) {
       // console.log("error");
@@ -888,7 +968,8 @@ const BlogPage = () => {
                   height={600}
                   alt="image"
                   className={styles.SecondpartLeftImage}
-                  src={require(`./../../../public/services/${selectedItemForDetail.name}.jpg`)}
+                  // src={require(`./../../../public/services/${selectedItemForDetail.name}.jpg`)}
+                  src={AllItemsImages[selectedItemForDetail.name]}
 
                   // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${selectedItemForDetail.name}.png`}
                 ></Image>
@@ -940,7 +1021,8 @@ const BlogPage = () => {
                   className={styles.SecondpartLeftImage}
                   // src={require(`./../../../public/services/${allItems[0].image}.jpg`)}
 
-                  src={require(`./../../../public/services/${allItems[0].name}.jpg`)}
+                  // src={require(`./../../../public/services/${allItems[0].name}.jpg`)}
+                  src={AllItemsImages[allItems[0].name]}
 
                   // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${allItems[0].name}.png`}
                 ></Image>
@@ -995,7 +1077,8 @@ const BlogPage = () => {
                       className={styles.SecondpartRightEachServiceImage}
                       // src={require(`./../../../public/services/${item.image}.jpg`)}
 
-                      src={require(`./../../../public/services/${item.name}.jpg`)}
+                      // src={require(`./../../../public/services/${item.name}.jpg`)}
+                      src={AllItemsImages[item.name]}
 
                       // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
                     ></Image>
@@ -1055,7 +1138,8 @@ const BlogPage = () => {
                     height={300}
                     alt="image"
                     className={styles.SecondpartRightEachServiceImage}
-                    src={require(`./../../../public/services/${item.name}.jpg`)}
+                    // src={require(`./../../../public/services/${item.name}.jpg`)}
+                    src={AllItemsImages[item.name]}
 
                     // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
                   ></Image>

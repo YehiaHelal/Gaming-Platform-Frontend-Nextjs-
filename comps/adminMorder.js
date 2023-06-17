@@ -91,6 +91,9 @@ const MangeOrders = () => {
   // set Add Note Value to Item
   const [ItemAddNoteValue, setItemAddNoteValue] = useState();
 
+  // Set All Items Images Fetch
+  const [AllItemsImages, setAllItemsImages] = useState();
+
   // console.log(ItemAddNoteValue);
 
   // useeffect to control show either the archived order or opened order
@@ -174,6 +177,80 @@ const MangeOrders = () => {
         // console.log(ShowArchivedOrders);
 
         setAllOrders(datas.data);
+
+        // setTimeout(() => {
+        //   setShowAllItems(true);
+        // }, 500);
+
+        // console.log("data");
+        // SetUserdataNameAddress(datas.data);
+      }
+    } catch (error) {
+      // console.log("error");
+      // if there is an error response
+      // console.log(error);
+      // if there is an error response
+      // console.log(error.response.data);
+      // setErrorSignup(error.response.data.error);
+    }
+  };
+
+  // Handle Get All Items Images
+  const handleGetAllImages = async () => {
+    // e.preventDefault();
+
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
+
+    if (AllItemsImages) {
+      console.log("there is images already");
+      return;
+    }
+
+    // fetch request
+    try {
+      const datas = await axios.get(
+        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // if (submission.message.length < 10) {
+      //   return { error: "Message must be over 10 chars long." };
+      // }
+
+      // console.log(datas);
+
+      // check response if ok
+      // console.log(datas.status === 200);
+
+      if (datas.status === 200) {
+        // console.log(datas.data);
+
+        // console.log(datas);
+        // setAllItems(datas.data);
+
+        console.log("fetched");
+
+        setAllItemsImages(datas.data.images);
 
         // setTimeout(() => {
         //   setShowAllItems(true);
@@ -586,6 +663,7 @@ const MangeOrders = () => {
           }}
           onClick={(e) => {
             handleGetAllOrders(e);
+            handleGetAllImages();
             setShowAllOrdersTab(true);
             setShowEditOrderCom(false);
             setShowDeleteOrderCom(false);
@@ -834,7 +912,8 @@ const MangeOrders = () => {
                             alt="image"
                             className={styles.productItemImage}
                             // src={require(`./../../../public/Items/${item.name}.png`)}
-                            src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                            // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                            src={AllItemsImages[item.name]}
                             // className="iconImage"
                             width={300}
                             height={300}
@@ -952,7 +1031,8 @@ const MangeOrders = () => {
                         alt="image"
                         className={styles.productItemImage}
                         // src={require(`./../../../public/Items/${item.name}.png`)}
-                        src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                        // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                        src={AllItemsImages[item.name]}
                         // className="iconImage"
                         width={300}
                         height={300}
@@ -1127,7 +1207,8 @@ const MangeOrders = () => {
                         alt="image"
                         className={styles.productItemImage}
                         // src={require(`./../../../public/Items/${item.name}.png`)}
-                        src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                        // src={`https://next-ecommerce-s3.s3.eu-north-1.amazonaws.com/items/${item.name}.png`}
+                        src={AllItemsImages[item.name]}
                         // className="iconImage"
                         width={300}
                         height={300}
