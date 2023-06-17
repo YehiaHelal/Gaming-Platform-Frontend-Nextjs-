@@ -33,7 +33,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getuserorders",
+            "https://gamingplatform.onrender.com/api/orders/getuserorders",
             formData,
             {
               withCredentials: true,

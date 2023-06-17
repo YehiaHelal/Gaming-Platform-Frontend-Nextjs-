@@ -325,7 +325,7 @@ const LoginPage = () => {
 
   //   try {
   //     const datas = await axios.post(
-  //       "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/imageupdate/",
+  //       "https://gamingplatform.onrender.com/api/users/imageupdate/",
 
   //       formData,
 
@@ -404,7 +404,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/imageupdate/",
+        "https://gamingplatform.onrender.com/api/users/imageupdate/",
 
         formData,
 
@@ -513,7 +513,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/imagesendingtofe/",
+        "https://gamingplatform.onrender.com/api/users/imagesendingtofe/",
 
         formData,
 
@@ -621,7 +621,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/getndata/",
+        "https://gamingplatform.onrender.com/api/users/getndata/",
         formData,
         {
           withCredentials: true,
@@ -698,7 +698,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/orders/getuserorders",
+        "https://gamingplatform.onrender.com/api/orders/getuserorders",
         formData,
         {
           withCredentials: true,
@@ -771,7 +771,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/items/itemsImages",
+        "https://gamingplatform.onrender.com/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -845,7 +845,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/mail/resetpasswordemail",
+        "https://gamingplatform.onrender.com/api/mail/resetpasswordemail",
         {
           submission,
         },
@@ -934,12 +934,12 @@ const LoginPage = () => {
       token: user.token,
     };
 
-    // "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/mail/",
+    // "https://gamingplatform.onrender.com/api/mail/",
 
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/changepassword/",
+        "https://gamingplatform.onrender.com/api/users/changepassword/",
         {
           submission,
         },
@@ -1018,7 +1018,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/signup/",
+        "https://gamingplatform.onrender.com/api/users/signup/",
         {
           submission,
         },
@@ -1093,7 +1093,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/updateinfo/",
+        "https://gamingplatform.onrender.com/api/users/updateinfo/",
         {
           submission,
         },
@@ -1167,7 +1167,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/login/",
+        "https://gamingplatform.onrender.com/api/users/login/",
         {
           submission,
         },
@@ -1251,7 +1251,7 @@ const LoginPage = () => {
   const LogoutFunctionHandler = async () => {
     // fetch request and if ok the cookie will be removed
     const datas = await axios.post(
-      "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/logout",
+      "https://gamingplatform.onrender.com/api/users/logout",
       {},
       {
         withCredentials: true,
@@ -1287,7 +1287,7 @@ const LoginPage = () => {
   //     const checkToken = async () => {
   //       try {
   //         const datas = await axios.post(
-  //           "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/checktoken",
+  //           "https://gamingplatform.onrender.com/api/users/checktoken",
   //           {
   //             message: "checkme",
   //           },

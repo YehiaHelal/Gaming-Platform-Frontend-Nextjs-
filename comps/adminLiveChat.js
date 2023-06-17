@@ -133,7 +133,7 @@ const LiveChat = () => {
 
   //   try {
   //     const datas = await axios.post(
-  //       "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/openchat/",
+  //       "https://gamingplatform.onrender.com/api/users/openchat/",
   //       {
   //         submission,
   //       },
@@ -190,7 +190,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/activechatpanel/",
+        "https://gamingplatform.onrender.com/api/users/activechatpanel/",
         formData,
         {
           withCredentials: true,
@@ -301,7 +301,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminsendingchat/",
+        "https://gamingplatform.onrender.com/api/users/adminsendingchat/",
         {
           submission,
         },
@@ -408,7 +408,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminjoinchat/",
+        "https://gamingplatform.onrender.com/api/users/adminjoinchat/",
         {
           submission,
         },
@@ -482,7 +482,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminmarkchatcomplete/",
+        "https://gamingplatform.onrender.com/api/users/adminmarkchatcomplete/",
         {
           submission,
         },
@@ -552,7 +552,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminaddnotetochat/",
+        "https://gamingplatform.onrender.com/api/users/adminaddnotetochat/",
         {
           submission,
         },
@@ -615,7 +615,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminmarkformanger/",
+        "https://gamingplatform.onrender.com/api/users/adminmarkformanger/",
         {
           submission,
         },
@@ -688,7 +688,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gaming-platform-backend-node-git-master-enstein01.vercel.app/api/users/adminblockuseremail/",
+        "https://gamingplatform.onrender.com/api/users/adminblockuseremail/",
         {
           submission,
         },
