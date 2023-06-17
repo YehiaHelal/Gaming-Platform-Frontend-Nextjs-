@@ -530,7 +530,7 @@ const LoginPage = () => {
         }
       );
 
-      // console.log(datas);
+      console.log(datas);
 
       // console.log("hey");
 
