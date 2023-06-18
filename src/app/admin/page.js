@@ -267,11 +267,6 @@ const Admin = () => {
     // console.log(email);
     // console.log(password);
 
-    if (AllItemsImages) {
-      // console.log("there is images already");
-      return;
-    }
-
     // fetch request
     try {
       const datas = await axios.get(

@@ -16,11 +16,14 @@ import Chat from "../../comps/chat";
 // };
 
 function RootLayout({ children }) {
-  // show chat app
-  const [showingChat, setShowingChat] = useState(true);
+  // to render only one time to get the backend test server running 30 delay after in-active 15minutes
+  const [renderOneTime, setRenderOneTime] = useState(false);
 
   // Show Css dropDown in Mediaquery Nav
   const [showDropCss, setShowDropCss] = useState(false);
+
+  // Show Css dropDown in Mediaquery Nav
+  const [value, setValue] = useState(0);
 
   if (typeof window !== "undefined") {
     // Perform localStorage action
@@ -34,6 +37,23 @@ function RootLayout({ children }) {
       localStorage.setItem("GamingcartItems", JSON.stringify(emptyarray));
     }
   }
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      const response = await fetch(
+        "https://gamingplatform.onrender.com/api/items"
+      );
+
+      const item = await response.json();
+
+      if (response.ok) {
+        // dispatcho({ type: "FETCHED-ALL", payload: json });
+        setValue(value + 1);
+      }
+    };
+
+    fetchItems();
+  }, [renderOneTime]);
 
   return (
     <html lang="en">
