@@ -764,7 +764,7 @@ const LoginPage = () => {
     console.log("images we are getting");
 
     if (AllItemsImages) {
-      console.log("there is images already");
+      // console.log("there is images already");
       return;
     }
 

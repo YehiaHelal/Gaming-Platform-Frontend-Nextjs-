@@ -267,6 +267,79 @@ const Admin = () => {
     // console.log(email);
     // console.log(password);
 
+    if (AllItemsImages) {
+      // console.log("there is images already");
+      return;
+    }
+
+    // fetch request
+    try {
+      const datas = await axios.get(
+        "https://gamingplatform.onrender.com/api/items/itemsImages",
+
+        {
+          withCredentials: true,
+          headers: {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            "Access-Control-Allow-Headers":
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+          // headers: {
+          //   "Access-Control-Allow-Origin": "*",
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
+
+      // if (submission.message.length < 10) {
+      //   return { error: "Message must be over 10 chars long." };
+      // }
+
+      // console.log(datas);
+
+      // check response if ok
+      // console.log(datas.status === 200);
+
+      if (datas.status === 200) {
+        // console.log(datas.data);
+
+        // console.log(datas);
+        // setAllItems(datas.data);
+
+        setAllItemsImages(datas.data.images);
+
+        // setTimeout(() => {
+        //   setShowAllItems(true);
+        // }, 500);
+
+        // console.log("data");
+        // SetUserdataNameAddress(datas.data);
+      }
+    } catch (error) {
+      // console.log("error");
+      // if there is an error response
+      // console.log(error);
+      // if there is an error response
+      // console.log(error.response.data);
+      // setErrorSignup(error.response.data.error);
+    }
+  };
+
+  // Handle Get All Items Images to Refresh Images
+
+  const handleGetAllImagesRefresh = async () => {
+    // e.preventDefault();
+
+    // const name = e.target.name.value;
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(password);
+
     // fetch request
     try {
       const datas = await axios.get(
@@ -611,6 +684,8 @@ const Admin = () => {
           setResetNameValueEdit("");
           setResetPriceValueEdit("");
           handleGetAllItems();
+          // handleGetAllImages();
+          handleGetAllImagesRefresh();
 
           // to let it stay up and not close the window in case he wants to check and edit more in same item
           setItemSelectedInEditCom();
@@ -899,7 +974,8 @@ const Admin = () => {
                 }}
                 onClick={() => {
                   handleGetAllItems();
-                  handleGetAllImages();
+                  // handleGetAllImages();
+                  handleGetAllImagesRefresh();
                   setShowAllItems(true);
                   setShowAddProductCom(false);
                   setShowDeleteProductCom(false);
@@ -938,6 +1014,7 @@ const Admin = () => {
                   setShowAddProductCom(false);
                   setShowAllItems(false);
                   setShowDeleteProductCom(false);
+                  handleGetAllImages();
                 }}
               >
                 Edit Product
@@ -955,6 +1032,7 @@ const Admin = () => {
                   setShowEditProductCom(false);
                   setShowAddProductCom(false);
                   setShowAllItems(false);
+                  handleGetAllImages();
                 }}
               >
                 Delete Product
