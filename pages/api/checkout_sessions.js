@@ -54,8 +54,8 @@ export default async function handler(req, res) {
         mode: "payment",
         success_url: `${req.headers.origin}/successorder`,
         cancel_url: `${req.headers.origin}/failure`,
-        // success_url: `https://sprightly-queijadas-dc931f.netlify.app/successorders`,
-        // cancel_url: `https://sprightly-queijadas-dc931f.netlify.app/order`,
+        // success_url: `https://gamingplatformtesting.netlify.app/successorders`,
+        // cancel_url: `https://gamingplatformtesting.netlify.app/order`,
       });
       res.json({ sessionURL: session.url });
     } catch (err) {

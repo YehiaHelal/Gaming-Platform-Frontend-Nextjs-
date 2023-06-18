@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="https://sprightly-queijadas-dc931f.netlify.app/services"
+            href="https://gamingplatformtesting.netlify.app/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page

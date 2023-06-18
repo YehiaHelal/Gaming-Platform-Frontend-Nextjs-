@@ -503,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("https://sprightly-queijadas-dc931f.netlify.app/successorder");
+          push("https://gamingplatformtesting.netlify.app/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
