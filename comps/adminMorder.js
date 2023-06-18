@@ -904,7 +904,8 @@ const MangeOrders = () => {
                     </button>
                   </div>
 
-                  {ShowSpecficOrderProduct && AllItemsImages &&
+                  {ShowSpecficOrderProduct &&
+                    AllItemsImages &&
                     order.orderProducts.map((item, i) => {
                       return (
                         <div key={i} className={styles.OrderFullDetails}>
@@ -1023,7 +1024,8 @@ const MangeOrders = () => {
                 <button>Edit Note</button>
               </div>
 
-              {ShowSpecficOrderProductinEdit && AllItemsImages &&
+              {ShowSpecficOrderProductinEdit &&
+                AllItemsImages &&
                 OrderSelectedToEdit.orderProducts.map((item, i) => {
                   return (
                     <div key={i} className={styles.OrderFullDetails}>
@@ -1199,7 +1201,8 @@ const MangeOrders = () => {
                 {/* <button>Archive order</button> */}
               </div>
 
-              {ShowSpecficOrderProductinDelete && AllItemsImages &&
+              {ShowSpecficOrderProductinDelete &&
+                AllItemsImages &&
                 OrderSelectedToDelete.orderProducts.map((item, i) => {
                   return (
                     <div key={i} className={styles.OrderFullDetails}>
