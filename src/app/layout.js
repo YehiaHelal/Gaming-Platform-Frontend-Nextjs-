@@ -25,6 +25,9 @@ function RootLayout({ children }) {
   // Show Css dropDown in Mediaquery Nav
   const [value, setValue] = useState(0);
 
+  // Show Login or Profile Button by check LocalStorage
+  const [LoginOrProfile, setLoginOrProfile] = useState(false);
+
   if (typeof window !== "undefined") {
     // Perform localStorage action
     // const item = localStorage.getItem("key");
@@ -54,6 +57,20 @@ function RootLayout({ children }) {
 
     fetchItems();
   }, [renderOneTime]);
+
+  useEffect(() => {
+    if (
+      JSON.parse(localStorage.getItem("Gaminguser")) &&
+      Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
+
+      // localStoragechecking !== undefined
+      //  &&
+      // Object.keys(localStoragechecking).length > 1
+    ) {
+      // console.log("there is user and local storage data");
+      setLoginOrProfile(true);
+    }
+  }, []);
 
   return (
     <html lang="en">
@@ -94,7 +111,9 @@ function RootLayout({ children }) {
                 </div>
 
                 <div className="nav-each-part-three">
-                  <Link href="/login">Login</Link>
+                  <Link href="/login">
+                    {!LoginOrProfile ? "Login" : "Profile"}
+                  </Link>
                 </div>
               </div>
 
