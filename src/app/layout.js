@@ -58,16 +58,30 @@ function RootLayout({ children }) {
     fetchItems();
   }, [renderOneTime]);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   if (
+  //     JSON.parse(localStorage.getItem("Gaminguser")) &&
+  //     Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
+  //   ) {
+  //     setLoginOrProfile(true);
+  //   }
+
+  //   if (!JSON.parse(localStorage.getItem("Gaminguser"))) {
+  //     setLoginOrProfile(false);
+  //   }
+
+  //   if (
+  //     Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
+  //   ) {
+  //     setLoginOrProfile(false);
+  //   }
+  // }, []);
+
+  if (typeof window !== "undefined") {
     if (
       JSON.parse(localStorage.getItem("Gaminguser")) &&
       Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
-
-      // localStoragechecking !== undefined
-      //  &&
-      // Object.keys(localStoragechecking).length > 1
     ) {
-      // console.log("there is user and local storage data");
       setLoginOrProfile(true);
     }
 
@@ -80,7 +94,7 @@ function RootLayout({ children }) {
     ) {
       setLoginOrProfile(false);
     }
-  }, []);
+  }
 
   return (
     <html lang="en">
