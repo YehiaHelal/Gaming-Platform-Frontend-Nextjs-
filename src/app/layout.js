@@ -70,6 +70,16 @@ function RootLayout({ children }) {
       // console.log("there is user and local storage data");
       setLoginOrProfile(true);
     }
+
+    if (!JSON.parse(localStorage.getItem("Gaminguser"))) {
+      setLoginOrProfile(false);
+    }
+
+    if (
+      Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
+    ) {
+      setLoginOrProfile(false);
+    }
   }, []);
 
   return (
