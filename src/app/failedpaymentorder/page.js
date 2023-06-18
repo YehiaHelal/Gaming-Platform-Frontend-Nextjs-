@@ -33,7 +33,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "http://localhost:4000/api/orders/getuserorders",
+            "https://pharmacyonline.onrender.com/api/orders/getuserorders",
             formData,
             {
               withCredentials: true,
@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="http://localhost:3000/services"
+            href="https://pharma-online-frontend.vercel.app/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page

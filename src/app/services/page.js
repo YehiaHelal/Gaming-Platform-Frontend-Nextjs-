@@ -169,7 +169,9 @@ const BlogPage = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch("http://localhost:4000/api/items");
+      const response = await fetch(
+        "https://pharmacyonline.onrender.com/api/items"
+      );
 
       const item = await response.json();
 
@@ -354,7 +356,7 @@ const BlogPage = () => {
         // fetch request
         try {
           const datas = await axios.post(
-            "http://localhost:4000/api/users/getndata/",
+            "https://pharmacyonline.onrender.com/api/users/getndata/",
             formData,
             {
               withCredentials: true,
@@ -454,7 +456,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/orders/cartorder",
+        "https://pharmacyonline.onrender.com/api/orders/cartorder",
         { submission },
         {
           withCredentials: true,
@@ -501,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("http://localhost:3000/successorder");
+          push("https://pharma-online-frontend.vercel.app/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
@@ -537,7 +539,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "http://localhost:4000/api/items/itemsImages",
+        "https://pharmacyonline.onrender.com/api/items/itemsImages",
 
         {
           withCredentials: true,

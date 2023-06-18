@@ -325,7 +325,7 @@ const LoginPage = () => {
 
   //   try {
   //     const datas = await axios.post(
-  //       "http://localhost:4000/api/users/imageupdate/",
+  //       "https://pharmacyonline.onrender.com/api/users/imageupdate/",
 
   //       formData,
 
@@ -404,7 +404,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/imageupdate/",
+        "https://pharmacyonline.onrender.com/api/users/imageupdate/",
 
         formData,
 
@@ -511,7 +511,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/imagesendingtofe/",
+        "https://pharmacyonline.onrender.com/api/users/imagesendingtofe/",
 
         formData,
 
@@ -619,7 +619,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/getndata/",
+        "https://pharmacyonline.onrender.com/api/users/getndata/",
         formData,
         {
           withCredentials: true,
@@ -696,7 +696,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/orders/getuserorders",
+        "https://pharmacyonline.onrender.com/api/orders/getuserorders",
         formData,
         {
           withCredentials: true,
@@ -769,7 +769,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "http://localhost:4000/api/items/itemsImages",
+        "https://pharmacyonline.onrender.com/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -843,7 +843,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/mail/resetpasswordemail",
+        "https://pharmacyonline.onrender.com/api/mail/resetpasswordemail",
         {
           submission,
         },
@@ -932,12 +932,12 @@ const LoginPage = () => {
       token: user.token,
     };
 
-    // "http://localhost:4000/api/mail/",
+    // "https://pharmacyonline.onrender.com/api/mail/",
 
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/changepassword/",
+        "https://pharmacyonline.onrender.com/api/users/changepassword/",
         {
           submission,
         },
@@ -1016,7 +1016,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/signup/",
+        "https://pharmacyonline.onrender.com/api/users/signup/",
         {
           submission,
         },
@@ -1091,7 +1091,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/updateinfo/",
+        "https://pharmacyonline.onrender.com/api/users/updateinfo/",
         {
           submission,
         },
@@ -1165,7 +1165,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/users/login/",
+        "https://pharmacyonline.onrender.com/api/users/login/",
         {
           submission,
         },
@@ -1249,7 +1249,7 @@ const LoginPage = () => {
   const LogoutFunctionHandler = async () => {
     // fetch request and if ok the cookie will be removed
     const datas = await axios.post(
-      "http://localhost:4000/api/users/logout",
+      "https://pharmacyonline.onrender.com/api/users/logout",
       {},
       {
         withCredentials: true,
@@ -1285,7 +1285,7 @@ const LoginPage = () => {
   //     const checkToken = async () => {
   //       try {
   //         const datas = await axios.post(
-  //           "http://localhost:4000/api/users/checktoken",
+  //           "https://pharmacyonline.onrender.com/api/users/checktoken",
   //           {
   //             message: "checkme",
   //           },

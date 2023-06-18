@@ -19,7 +19,9 @@ function Home() {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch("http://localhost:4000/api/items");
+      const response = await fetch(
+        "https://pharmacyonline.onrender.com/api/items"
+      );
 
       const item = await response.json();
       // console.log("there");

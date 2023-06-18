@@ -51,7 +51,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "http://localhost:4000/api/orders/getuserorders",
+            "https://pharmacyonline.onrender.com/api/orders/getuserorders",
             { submission },
             {
               withCredentials: true,
@@ -132,7 +132,7 @@ const BlogPage = () => {
       // fetch request
       try {
         const datas = await axios.post(
-          "http://localhost:4000/api/orders/cartorder",
+          "https://pharmacyonline.onrender.com/api/orders/cartorder",
           { submission },
           {
             withCredentials: true,
@@ -230,7 +230,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "http://localhost:4000/api/mail/emailorderplaced",
+        "https://pharmacyonline.onrender.com/api/mail/emailorderplaced",
         {
           submission,
         },
