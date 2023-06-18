@@ -4,7 +4,7 @@ import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ItemsContextProvider } from "../../context/ItemsContextCart";
 
 import { AuthContextProvider } from "../../context/AuthContext";
@@ -25,6 +25,9 @@ function RootLayout({ children }) {
   // Show Css dropDown in Mediaquery Nav
   const [value, setValue] = useState(0);
 
+  // Show Refresh Login or Profile state
+  const [ValueNumber, setValueNumber] = useState(0);
+
   // Show Login or Profile Button by check LocalStorage
   const [LoginOrProfile, setLoginOrProfile] = useState(false);
 
@@ -43,9 +46,7 @@ function RootLayout({ children }) {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch(
-        "https://gamingplatform.onrender.com/api/items"
-      );
+      const response = await fetch("http://localhost:4000/api/items");
 
       const item = await response.json();
 
@@ -58,26 +59,7 @@ function RootLayout({ children }) {
     fetchItems();
   }, [renderOneTime]);
 
-  // useEffect(() => {
-  //   if (
-  //     JSON.parse(localStorage.getItem("Gaminguser")) &&
-  //     Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
-  //   ) {
-  //     setLoginOrProfile(true);
-  //   }
-
-  //   if (!JSON.parse(localStorage.getItem("Gaminguser"))) {
-  //     setLoginOrProfile(false);
-  //   }
-
-  //   if (
-  //     Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
-  //   ) {
-  //     setLoginOrProfile(false);
-  //   }
-  // }, []);
-
-  if (typeof window !== "undefined") {
+  useEffect(() => {
     if (
       JSON.parse(localStorage.getItem("Gaminguser")) &&
       Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length !== 0
@@ -85,16 +67,14 @@ function RootLayout({ children }) {
       setLoginOrProfile(true);
     }
 
-    if (!JSON.parse(localStorage.getItem("Gaminguser"))) {
-      setLoginOrProfile(false);
-    }
-
     if (
+      // localStorage.getItem("GamingcartItems") === null
+      JSON.parse(localStorage.getItem("Gaminguser")) &&
       Object.keys(JSON.parse(localStorage.getItem("Gaminguser"))).length === 0
     ) {
       setLoginOrProfile(false);
     }
-  }
+  }, [ValueNumber]);
 
   return (
     <html lang="en">
@@ -102,7 +82,12 @@ function RootLayout({ children }) {
         <AuthContextProvider>
           <ItemsContextProvider>
             <div className="nav">
-              <Link href="/">
+              <Link
+                onClick={() => {
+                  setValueNumber(ValueNumber + 1);
+                }}
+                href="/"
+              >
                 <div className="nav-each-part-one">
                   <h1 className="TitleStyle">LOGO</h1>
                 </div>
@@ -110,12 +95,45 @@ function RootLayout({ children }) {
 
               <div className="second-part-layout">
                 <div className="nav-each-part-two">
-                  <Link href="/">Home</Link>
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/"
+                  >
+                    Home
+                  </Link>
 
-                  <Link href="/contacts">Aboutus</Link>
-                  <Link href="/portfolio">Portfolio</Link>
-                  <Link href="/services">Services</Link>
-                  <Link href="/services">
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/contacts"
+                  >
+                    Aboutus
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/portfolio"
+                  >
+                    Portfolio
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/services"
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/services"
+                  >
                     {" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -135,8 +153,14 @@ function RootLayout({ children }) {
                 </div>
 
                 <div className="nav-each-part-three">
-                  <Link href="/login">
-                    {!LoginOrProfile ? "Login" : "Profile"}
+                  <Link
+                    onClick={() => {
+                      setValueNumber(ValueNumber + 1);
+                    }}
+                    href="/login"
+                  >
+                    {!LoginOrProfile && "Login"}
+                    {LoginOrProfile && "Profile"}
                   </Link>
                 </div>
               </div>
