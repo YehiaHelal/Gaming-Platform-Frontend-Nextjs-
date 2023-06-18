@@ -463,9 +463,7 @@ const LoginPage = () => {
   };
 
   // fetching images from backend
-
   // sending image function v2 route
-
   const handleFetchingImagesFromBackend = async (e) => {
     // e.prevent Default();
 

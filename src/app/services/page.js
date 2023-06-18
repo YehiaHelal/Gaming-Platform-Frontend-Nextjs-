@@ -503,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("https://gamingplatformtesting.netlify.app/successorder");
+          push("https://gaming-platform-frontend-next.vercel.app/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
