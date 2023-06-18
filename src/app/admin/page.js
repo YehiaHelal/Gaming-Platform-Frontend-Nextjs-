@@ -141,7 +141,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/dashboarddata",
+        "https://gamingplatform.onrender.com/api/users/dashboarddata",
         formData,
         {
           withCredentials: true,
@@ -206,7 +206,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://pharmacyonline.onrender.com/api/items",
+        "https://gamingplatform.onrender.com/api/items",
 
         {
           withCredentials: true,
@@ -270,7 +270,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://pharmacyonline.onrender.com/api/items/itemsImages",
+        "https://gamingplatform.onrender.com/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -352,7 +352,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/items/addproduct/",
+        "https://gamingplatform.onrender.com/api/items/addproduct/",
 
         formData,
 
@@ -449,7 +449,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/items/deleteproduct",
+        "https://gamingplatform.onrender.com/api/items/deleteproduct",
 
         { submission },
 
@@ -570,7 +570,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/items/editproduct",
+        "https://gamingplatform.onrender.com/api/items/editproduct",
 
         formData,
 

@@ -12,11 +12,11 @@ yarn dev
 pnpm dev
 ```
 
-Open [https://pharma-online-frontend.vercel.app](https://pharma-online-frontend.vercel.app) with your browser to see the result.
+Open [https://gaming-platform-frontend-next.vercel.app](https://gaming-platform-frontend-next.vercel.app) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-[https://pharma-online-frontend.vercel.app/api/hello](https://pharma-online-frontend.vercel.app/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
+[https://gaming-platform-frontend-next.vercel.app/api/hello](https://gaming-platform-frontend-next.vercel.app/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

@@ -50,12 +50,12 @@ const ResetPassword = ({ params }) => {
       token: params.id,
     };
 
-    // "https://pharmacyonline.onrender.com/api/mail/",
+    // "https://gamingplatform.onrender.com/api/mail/",
 
     // fetch request
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/resetpassword/",
+        "https://gamingplatform.onrender.com/api/users/resetpassword/",
         {
           submission,
         },

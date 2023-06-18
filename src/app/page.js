@@ -20,7 +20,7 @@ function Home() {
   useEffect(() => {
     const fetchItems = async () => {
       const response = await fetch(
-        "https://pharmacyonline.onrender.com/api/items"
+        "https://gamingplatform.onrender.com/api/items"
       );
 
       const item = await response.json();

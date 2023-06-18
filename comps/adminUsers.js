@@ -163,7 +163,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/getallusers",
+        "https://gamingplatform.onrender.com/api/users/getallusers",
         formData,
         {
           withCredentials: true,
@@ -233,7 +233,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/orders/getallorders",
+        "https://gamingplatform.onrender.com/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -311,7 +311,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/addnotetouser",
+        "https://gamingplatform.onrender.com/api/users/addnotetouser",
 
         submission,
 
@@ -379,7 +379,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/Users/deleteuser",
+        "https://gamingplatform.onrender.com/api/Users/deleteuser",
 
         { submission },
 
@@ -486,7 +486,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/deactivateuser",
+        "https://gamingplatform.onrender.com/api/users/deactivateuser",
 
         { submission },
 
@@ -602,7 +602,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/updateuserinfo",
+        "https://gamingplatform.onrender.com/api/users/updateuserinfo",
 
         formData,
 
@@ -695,7 +695,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/users/adduseradmin",
+        "https://gamingplatform.onrender.com/api/users/adduseradmin",
 
         { submission },
 

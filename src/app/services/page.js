@@ -170,7 +170,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const response = await fetch(
-        "https://pharmacyonline.onrender.com/api/items"
+        "https://gamingplatform.onrender.com/api/items"
       );
 
       const item = await response.json();
@@ -356,7 +356,7 @@ const BlogPage = () => {
         // fetch request
         try {
           const datas = await axios.post(
-            "https://pharmacyonline.onrender.com/api/users/getndata/",
+            "https://gamingplatform.onrender.com/api/users/getndata/",
             formData,
             {
               withCredentials: true,
@@ -456,7 +456,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://pharmacyonline.onrender.com/api/orders/cartorder",
+        "https://gamingplatform.onrender.com/api/orders/cartorder",
         { submission },
         {
           withCredentials: true,
@@ -503,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("https://pharma-online-frontend.vercel.app/successorder");
+          push("https://gaming-platform-frontend-next.vercel.app/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
@@ -539,7 +539,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://pharmacyonline.onrender.com/api/items/itemsImages",
+        "https://gamingplatform.onrender.com/api/items/itemsImages",
 
         {
           withCredentials: true,
