@@ -170,7 +170,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const response = await fetch(
-        "https://gamingplatform.onrender.com/api/items"
+        "www.gamingbk.shoponlinemarket.cloud/api/items"
       );
 
       const item = await response.json();
@@ -356,7 +356,7 @@ const BlogPage = () => {
         // fetch request
         try {
           const datas = await axios.post(
-            "https://gamingplatform.onrender.com/api/users/getndata/",
+            "www.gamingbk.shoponlinemarket.cloud/api/users/getndata/",
             formData,
             {
               withCredentials: true,
@@ -456,7 +456,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/orders/cartorder",
+        "www.gamingbk.shoponlinemarket.cloud/api/orders/cartorder",
         { submission },
         {
           withCredentials: true,
@@ -503,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("https://gaming-platform-frontend-next.vercel.app/successorder");
+          push("www.gaming.shoponlinemarket.cloud/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
@@ -539,7 +539,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gamingplatform.onrender.com/api/items/itemsImages",
+        "www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
 
         {
           withCredentials: true,

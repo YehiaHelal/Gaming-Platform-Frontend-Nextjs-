@@ -51,7 +51,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "https://gamingplatform.onrender.com/api/orders/getuserorders",
+            "www.gamingbk.shoponlinemarket.cloud/api/orders/getuserorders",
             { submission },
             {
               withCredentials: true,
@@ -132,7 +132,7 @@ const BlogPage = () => {
       // fetch request
       try {
         const datas = await axios.post(
-          "https://gamingplatform.onrender.com/api/orders/cartorder",
+          "www.gamingbk.shoponlinemarket.cloud/api/orders/cartorder",
           { submission },
           {
             withCredentials: true,
@@ -230,7 +230,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/mail/emailorderplaced",
+        "www.gamingbk.shoponlinemarket.cloud/api/mail/emailorderplaced",
         {
           submission,
         },

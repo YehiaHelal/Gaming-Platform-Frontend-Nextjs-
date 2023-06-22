@@ -163,7 +163,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/getallusers",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/getallusers",
         formData,
         {
           withCredentials: true,
@@ -233,7 +233,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/orders/getallorders",
+        "www.gamingbk.shoponlinemarket.cloud/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -311,7 +311,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/addnotetouser",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/addnotetouser",
 
         submission,
 
@@ -379,7 +379,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/Users/deleteuser",
+        "www.gamingbk.shoponlinemarket.cloud/api/Users/deleteuser",
 
         { submission },
 
@@ -486,7 +486,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/deactivateuser",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/deactivateuser",
 
         { submission },
 
@@ -602,7 +602,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/updateuserinfo",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/updateuserinfo",
 
         formData,
 
@@ -695,7 +695,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/adduseradmin",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/adduseradmin",
 
         { submission },
 

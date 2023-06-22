@@ -325,7 +325,7 @@ const LoginPage = () => {
 
   //   try {
   //     const datas = await axios.post(
-  //       "https://gamingplatform.onrender.com/api/users/imageupdate/",
+  //       "www.gamingbk.shoponlinemarket.cloud/api/users/imageupdate/",
 
   //       formData,
 
@@ -404,7 +404,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/imageupdate/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/imageupdate/",
 
         formData,
 
@@ -511,7 +511,7 @@ const LoginPage = () => {
     // uploadprofileimgtos3
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/imagesendingtofe/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/imagesendingtofe/",
 
         formData,
 
@@ -619,7 +619,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/getndata/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/getndata/",
         formData,
         {
           withCredentials: true,
@@ -696,7 +696,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/orders/getuserorders",
+        "www.gamingbk.shoponlinemarket.cloud/api/orders/getuserorders",
         formData,
         {
           withCredentials: true,
@@ -769,7 +769,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "https://gamingplatform.onrender.com/api/items/itemsImages",
+        "www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -843,7 +843,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/mail/resetpasswordemail",
+        "www.gamingbk.shoponlinemarket.cloud/api/mail/resetpasswordemail",
         {
           submission,
         },
@@ -932,12 +932,12 @@ const LoginPage = () => {
       token: user.token,
     };
 
-    // "https://gamingplatform.onrender.com/api/mail/",
+    // "www.gamingbk.shoponlinemarket.cloud/api/mail/",
 
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/changepassword/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/changepassword/",
         {
           submission,
         },
@@ -1016,7 +1016,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/signup/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/signup/",
         {
           submission,
         },
@@ -1091,7 +1091,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/updateinfo/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/updateinfo/",
         {
           submission,
         },
@@ -1165,7 +1165,7 @@ const LoginPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "https://gamingplatform.onrender.com/api/users/login/",
+        "www.gamingbk.shoponlinemarket.cloud/api/users/login/",
         {
           submission,
         },
@@ -1249,7 +1249,7 @@ const LoginPage = () => {
   const LogoutFunctionHandler = async () => {
     // fetch request and if ok the cookie will be removed
     const datas = await axios.post(
-      "https://gamingplatform.onrender.com/api/users/logout",
+      "www.gamingbk.shoponlinemarket.cloud/api/users/logout",
       {},
       {
         withCredentials: true,
@@ -1285,7 +1285,7 @@ const LoginPage = () => {
   //     const checkToken = async () => {
   //       try {
   //         const datas = await axios.post(
-  //           "https://gamingplatform.onrender.com/api/users/checktoken",
+  //           "www.gamingbk.shoponlinemarket.cloud/api/users/checktoken",
   //           {
   //             message: "checkme",
   //           },

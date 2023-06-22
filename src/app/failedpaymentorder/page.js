@@ -33,7 +33,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "https://gamingplatform.onrender.com/api/orders/getuserorders",
+            "www.gamingbk.shoponlinemarket.cloud/api/orders/getuserorders",
             formData,
             {
               withCredentials: true,
@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="https://gaming-platform-frontend-next.vercel.app/services"
+            href="www.gaming.shoponlinemarket.cloud/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page
