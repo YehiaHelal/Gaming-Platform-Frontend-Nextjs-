@@ -143,7 +143,7 @@ const MangeOrders = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/getallorders",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -215,7 +215,7 @@ const MangeOrders = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -298,7 +298,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/orderaddnote/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/orderaddnote/",
 
         { submission },
 
@@ -366,7 +366,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/deleteorder",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/deleteorder",
 
         { submission },
 
@@ -473,7 +473,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/markordercompleted",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/markordercompleted",
 
         { submission },
 
@@ -586,7 +586,7 @@ const MangeOrders = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/updateOrder",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/updateOrder",
 
         formData,
 

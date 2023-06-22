@@ -163,7 +163,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/getallusers",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/getallusers",
         formData,
         {
           withCredentials: true,
@@ -233,7 +233,7 @@ const MangeUsers = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/getallorders",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/getallorders",
         formData,
         {
           withCredentials: true,
@@ -311,7 +311,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/addnotetouser",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/addnotetouser",
 
         submission,
 
@@ -379,7 +379,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/Users/deleteuser",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/Users/deleteuser",
 
         { submission },
 
@@ -486,7 +486,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/deactivateuser",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/deactivateuser",
 
         { submission },
 
@@ -602,7 +602,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/updateuserinfo",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/updateuserinfo",
 
         formData,
 
@@ -695,7 +695,7 @@ const MangeUsers = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adduseradmin",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adduseradmin",
 
         { submission },
 

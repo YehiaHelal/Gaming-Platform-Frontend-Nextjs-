@@ -170,7 +170,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const response = await fetch(
-        "www.gamingbk.shoponlinemarket.cloud/api/items"
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items"
       );
 
       const item = await response.json();
@@ -356,7 +356,7 @@ const BlogPage = () => {
         // fetch request
         try {
           const datas = await axios.post(
-            "www.gamingbk.shoponlinemarket.cloud/api/users/getndata/",
+            "https://www.gamingbk.shoponlinemarket.cloud/api/users/getndata/",
             formData,
             {
               withCredentials: true,
@@ -456,7 +456,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/orders/cartorder",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/orders/cartorder",
         { submission },
         {
           withCredentials: true,
@@ -503,7 +503,7 @@ const BlogPage = () => {
 
         setTimeout(() => {
           // navTo("/");
-          push("www.gaming.shoponlinemarket.cloud/successorder");
+          push("https://www.gaming.shoponlinemarket.cloud/successorder");
 
           // redirecting to order was succesfully placed thank you
           // redirect to homepage option.
@@ -539,7 +539,7 @@ const BlogPage = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
 
         {
           withCredentials: true,

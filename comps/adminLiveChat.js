@@ -133,7 +133,7 @@ const LiveChat = () => {
 
   //   try {
   //     const datas = await axios.post(
-  //       "www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
+  //       "https://www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
   //       {
   //         submission,
   //       },
@@ -190,7 +190,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/activechatpanel/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/activechatpanel/",
         formData,
         {
           withCredentials: true,
@@ -301,7 +301,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminsendingchat/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminsendingchat/",
         {
           submission,
         },
@@ -408,7 +408,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminjoinchat/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminjoinchat/",
         {
           submission,
         },
@@ -482,7 +482,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminmarkchatcomplete/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminmarkchatcomplete/",
         {
           submission,
         },
@@ -552,7 +552,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminaddnotetochat/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminaddnotetochat/",
         {
           submission,
         },
@@ -615,7 +615,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminmarkformanger/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminmarkformanger/",
         {
           submission,
         },
@@ -688,7 +688,7 @@ const LiveChat = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/adminblockuseremail/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/adminblockuseremail/",
         {
           submission,
         },

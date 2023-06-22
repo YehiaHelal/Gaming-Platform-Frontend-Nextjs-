@@ -141,7 +141,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/dashboarddata",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/dashboarddata",
         formData,
         {
           withCredentials: true,
@@ -206,7 +206,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "www.gamingbk.shoponlinemarket.cloud/api/items",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items",
 
         {
           withCredentials: true,
@@ -270,7 +270,7 @@ const Admin = () => {
     // fetch request
     try {
       const datas = await axios.get(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/itemsImages",
 
         {
           withCredentials: true,
@@ -352,7 +352,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/addproduct/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/addproduct/",
 
         formData,
 
@@ -449,7 +449,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/deleteproduct",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/deleteproduct",
 
         { submission },
 
@@ -570,7 +570,7 @@ const Admin = () => {
 
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/items/editproduct",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/items/editproduct",
 
         formData,
 

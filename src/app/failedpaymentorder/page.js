@@ -33,7 +33,7 @@ const BlogPage = () => {
 
         try {
           const datas = await axios.post(
-            "www.gamingbk.shoponlinemarket.cloud/api/orders/getuserorders",
+            "https://www.gamingbk.shoponlinemarket.cloud/api/orders/getuserorders",
             formData,
             {
               withCredentials: true,
@@ -89,7 +89,7 @@ const BlogPage = () => {
           </div>
 
           <Link
-            href="www.gaming.shoponlinemarket.cloud/services"
+            href="https://www.gaming.shoponlinemarket.cloud/services"
             className={styles.Linkredirect}
           >
             Redirect to Order Page

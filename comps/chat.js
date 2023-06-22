@@ -143,7 +143,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
         {
           submission,
         },
@@ -261,7 +261,7 @@ const Chat = (props) => {
   //   // fetch request
   //   try {
   //     const datas = await axios.post(
-  //       "www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
+  //       "https://www.gamingbk.shoponlinemarket.cloud/api/users/openchat/",
   //       {
   //         submission,
   //       },
@@ -382,7 +382,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/getmessages/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/getmessages/",
         {
           submission,
         },
@@ -529,7 +529,7 @@ const Chat = (props) => {
     // fetch request
     try {
       const datas = await axios.post(
-        "www.gamingbk.shoponlinemarket.cloud/api/users/sendingchat/",
+        "https://www.gamingbk.shoponlinemarket.cloud/api/users/sendingchat/",
         {
           submission,
         },

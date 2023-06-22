@@ -54,8 +54,8 @@ export default async function handler(req, res) {
         mode: "payment",
         success_url: `${req.headers.origin}/successorder`,
         cancel_url: `${req.headers.origin}/failure`,
-        // success_url: `www.gaming.shoponlinemarket.cloud/successorders`,
-        // cancel_url: `www.gaming.shoponlinemarket.cloud/order`,
+        // success_url: `https://www.gaming.shoponlinemarket.cloud/successorders`,
+        // cancel_url: `https://www.gaming.shoponlinemarket.cloud/order`,
       });
       res.json({ sessionURL: session.url });
     } catch (err) {
